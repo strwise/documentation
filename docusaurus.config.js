@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Documentation - Video Streaming Resell Platform',
   tagline: 'Welcome to the PaaS Video Streaming Resell Platform, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   // disable indexing of the site
   noIndex: true,
@@ -116,7 +116,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mimir Tech do Brasil. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://www.mimirtech.co" target="_blank">Mimir Tech do Brasil</a>. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
