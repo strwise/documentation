@@ -64,7 +64,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: '#',
+            href: 'https://video-stream-platform-api-reference.pages.dev/',
             position: 'left',
             label: 'API Reference',
           },
@@ -104,7 +104,7 @@ const config = {
             items: [
               {
                 label: 'API Reference',
-                href: '#',
+                href: 'https://video-stream-platform-api-reference.pages.dev/',
               },
               {
                 label: 'GitHub',
