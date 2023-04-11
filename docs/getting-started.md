@@ -8,7 +8,7 @@ sidebar_label: Getting Started
 
 ## Introduction
 
-Welcome to the PaaS Video Streaming Resell Platform! This section will help you get started with the platform by covering the basics of administration, logging in, and navigating the platform's resources.
+Welcome to the PaaS Video Streaming Resell System! This section will help you get started with the platform by covering the basics of administration, logging in, and navigating the platform's resources.
 
 ## Configuring the Platform
 

@@ -5,6 +5,8 @@ sidebar_label: Overview
 
 # Video Streaming Resell Platform
 
+## Overview
+
 **Web Video Stream Resell Platform** is a comprehensive, powerful and user-friendly **all-in-one self-hosted PaaS software** that allows businesses of all sizes to **resell video streaming services** such as:
 
 - Live streaming
