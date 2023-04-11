@@ -7,7 +7,7 @@ sidebar_label: Users Management
 
 ## Overview
 
-The user management system in our Video Streaming Resell Platform is designed to provide flexible and secure authentication and authorization across multiple customers and accounts. By allowing a single user to access multiple accounts, the platform enables streamlined management of services, billing, and support.
+The user management system in our SaaS Video Streaming Resell Platform is designed to provide flexible and secure authentication and authorization across multiple customers and accounts. By allowing a single user to access multiple accounts, the platform enables streamlined management of services, billing, and support.
 
 This separation of authentication and authorization from services, billing, and support offers an added layer of security and control over your services. The platform offers granular user permission and access control, allowing you to easily manage and monitor user access levels.
 

@@ -5,7 +5,7 @@ sidebar_label: Further Security Steps
 
 # Further Security Steps
 
-**PaaS Video Streaming Resell** includes many features to help keep your data safe, but you can take recommended additional steps to secure your application installation further.
+**SaaS Video Streaming Resell** includes many features to help keep your data safe, but you can take recommended additional steps to secure your application installation further.
 
 ## Recommended Further Security Steps
 
