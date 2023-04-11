@@ -4,3 +4,5 @@ sidebar_label: Rooms Management
 ---
 
 # Rooms
+
+> Work in progress
