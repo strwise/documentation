@@ -10,6 +10,9 @@ const config = {
   tagline: 'Welcome to the PaaS Video Streaming Resell Platform, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.',
   favicon: 'img/favicon.ico',
 
+  // disable indexing of the site
+  noIndex: true,
+
   // Set the production url of your site here
   url: 'https://video-stream-platform-documentation.pages.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
@@ -18,8 +21,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'mimirtechco', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'mimirtech', // Usually your GitHub org/user name.
+  projectName: 'video-stream-platform/documentation', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -113,12 +116,14 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Mimir Tech do Brasil, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mimir Tech do Brasil. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // add meta tag with Page Author
+      metadata: [{ name: 'author', content: 'Mimir Tech do Brasil' }],
     }),
 };
 
