@@ -10,7 +10,7 @@ This section will help you get started with the platform by covering the basics 
 
 ## Administration Area
 
-The Administration Area is the portal that admins access when they work within PaaS Video Streaming Resell Platform. The PaaS Video Streaming Resell Platform Administration Area has interfaces and feature pages, each often containing multiple sub-interfaces.
+The Administration Area is the portal that admins access when they work within SaaS Video Streaming Resell Platform. The PaaS Video Streaming Resell Platform Administration Area has interfaces and feature pages, each often containing multiple sub-interfaces.
 
 You can access the Admin Area by following the steps below to log in as an admin. Then, use the navigation tools to find the PaaS Video Streaming Resell Platform features you want to use.
 
