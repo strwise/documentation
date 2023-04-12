@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 2
 sidebar_label: Admins Management
 ---
 
@@ -66,3 +66,7 @@ For all admin roles, you **must** enable **Access Dashboard**. This allows the a
 :::caution
 **Unauthorized Access**
 Many **Create** and **Update** permissions require the related **Read** permission. If you see **Unauthorized Access** errors, add the **Read** permission. For example, errors will occur for **Create Room** if you don't also enable **Read Rooms**.
+:::
+
+3. For **Notification Messages**, check the email types that you want admins with that role to receive.
+4. Click **Save**.

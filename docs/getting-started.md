@@ -3,7 +3,6 @@ sidebar_position: 2
 sidebar_label: Getting Started
 ---
 
-
 # Getting Started
 
 ## Introduction
@@ -53,8 +52,6 @@ The platform uses API credentials to authenticate requests to the API. To create
 
 Once you've entered the required information, the API credentials will be created, and you'll be able to use them to authenticate requests to the API.
 
-
-
 ## Navigating the Platform
 
 ### Administration Dashboard
@@ -62,3 +59,19 @@ Once you've entered the required information, the API credentials will be create
 The Administration Dashboard is the portal that admins access when they work within PaaS Video Streaming Resell Platform. The PaaS Video Streaming Resell Platform Administration Dashboard has interfaces and feature pages, each often containing multiple sub-interfaces.
 
 You can access the Admin Area by following the steps below to log in as an admin. Then, use the navigation tools to find the PaaS Video Streaming Resell Platform features you want to use.
+
+## Entities
+
+The platform is built around the following entities:
+
+### Customers
+
+Customers are the top-level entities in the system. Customers can have multiple accounts. Customers own accounts and rooms. They represent a billable party, like a business or person and each customer can have multiple users associated with it.
+
+### Accounts
+
+Accounts are the second-level entities in the system. Accounts are associated with a single customer, and this customer has all privileges over the account. Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation. Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have multiple users associated with it.
+
+### Users
+
+Users are the third-level entities in the system. Users represent a person who can access the platform and use or manage the services. Users can be associated with multiple customers or accounts, and each user can have multiple roles based on each permission granted and type of access for different customers and accounts. Each user can own different customers and accounts. Each user can have multiple roles associated with it.
