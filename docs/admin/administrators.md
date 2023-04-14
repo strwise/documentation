@@ -58,10 +58,11 @@ To create or update an administrator role:
 For all admin roles, you **must** enable **Access Dashboard**. This allows the admin to see main parts of the dashboard.
 :::
 
-* **Create**: permissions allow you to create new resources.
-* **Read**: permissions allow you to read/list resources.
-* **Update**: permissions allow you to update existing resources.
-* **Delete**: permissions allow you to delete existing resources.
+* **Create**: permissions allow you to create new resource.
+* **Read**: permissions allow you to read a resource.
+* **List**: permissions allow you to list resources.
+* **Update**: permissions allow you to update existing resource.
+* **Delete**: permissions allow you to delete existing resource.
 
 :::caution
 **Unauthorized Access**
