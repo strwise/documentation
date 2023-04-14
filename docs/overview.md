@@ -28,3 +28,8 @@ This documentation is split into tree different sections:
 - **Participant Guide** - This section covers the basics of using the platform as a participant (who participates in a meeting or live streaming).
 
 Each section is further divided into multiple chapters, which are organized into a logical hierarchy. The chapters are further divided into sections, which are further divided into subsections, and so on.
+
+You will find other documentation sections, as well as additional information and resources related to third-party dependencies, within our platform. We strive to provide comprehensive and up-to-date documentation to help you get the most out of our platform and ensure a smooth and efficient experience. 
+
+If you have any questions or need further assistance, please do not hesitate to reach out to our support team.
+

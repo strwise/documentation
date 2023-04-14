@@ -7,7 +7,7 @@ sidebar_label: Getting Started
 
 ## Introduction
 
-Welcome to the PaaS Video Streaming Resell System! This section will help you get started with the platform by covering the basics of administration, logging in, and navigating the platform's resources.
+Welcome to the SaaS Video Streaming Resell System! This section will help you get started with the platform by covering the basics of administration, logging in, and navigating the platform's resources.
 
 ## Configuring the Platform
 
@@ -66,7 +66,9 @@ The platform is built around the following entities:
 
 ### Customers
 
-Customers are the top-level entities in the system. Customers can have multiple accounts. Customers own accounts and rooms. They represent a billable party, like a business or person and each customer can have multiple users associated with it.
+Customers are the top-level entities in the system, they represent a billable party, like a business or person. Customers can own multiple accounts and rooms, and each customer can have multiple users associated with it.
+
+> You can find more information about customers in the [Customers](/docs/admin/customers) section.
 
 ### Accounts
 
