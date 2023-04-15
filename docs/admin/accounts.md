@@ -5,6 +5,8 @@ sidebar_label: Accounts Management
 
 # Accounts
 
+> Work in progress
+
 ## Overview
 
 Accounts are the second-level entities in the system. Accounts represent a specific service, like a video streaming service or web meeting service.

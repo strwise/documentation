@@ -5,6 +5,8 @@ sidebar_label: Admins Management
 
 # Administrators and Permissions
 
+> Work in progress
+
 ## Overview
 
 SaaS Video Streaming Resell Platform allows you to create admins who can access and use the [Admin Area](/docs/admin/overview#administration-area). These users are separate from the clients that access the Client Area. You can create individual accounts for each admin and use detailed controls to set what they're able to view and do for each area of functionality.

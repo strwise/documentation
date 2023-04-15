@@ -4,6 +4,8 @@ sidebar_position: 2
 
 # API Credentials
 
+> Work in progress
+
 ## Creating API Credentials
 
 The platform uses API credentials to authenticate requests to the API. To create API credentials, navigate to the **API Credentials** page and click the **Create API Credentials** button. This will prompt you to enter the following information:
