@@ -62,7 +62,14 @@ You can access the Admin Area by following the steps below to log in as an admin
 
 ## Entities
 
+SaaS Video Streaming Resell Platform is a multi-tenant platform, which means that multiple customers can use the same platform instance. Each customer has their own accounts, rooms, users, and API credentials.
+
 The platform is built around the following entities:
+
+* Customers
+* Accounts
+* Users
+* Rooms
 
 ### Customers
 
@@ -74,7 +81,9 @@ You can find more information about customers in the [Customers](/docs/admin/cus
 
 ### Accounts
 
-Accounts are the second-level entities in the system. Accounts are associated with a single customer, and this customer has all privileges over the account. Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation. Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have multiple users associated with it.
+Accounts are the second-level entities in the system. Accounts are associated with a single customer, and this customer has all privileges over the account. Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation.
+
+Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have multiple users associated with it.
 
 :::note
 You can find more information about accounts in the [Accounts](/docs/admin/accounts) section.
@@ -82,8 +91,18 @@ You can find more information about accounts in the [Accounts](/docs/admin/accou
 
 ### Users
 
-Users are the third-level entities in the system. Users represent a person who can access the platform and use or manage the services. Users can be associated with multiple customers or accounts, and each user can have multiple roles based on each permission granted and type of access for different customers and accounts. Each user can own different customers and accounts. Each user can have multiple roles associated with it.
+Users are the third-level entities in the system. Users represent a person who can access the platform and use or manage the services. Users can be associated with multiple customers or accounts, and each user can have multiple roles based on each permission granted and type of access for different customers and accounts. 
+
+Each user can own different customers and accounts. Each user can have multiple roles associated with it.
 
 :::note
 You can find more information about users in the [Users](/docs/admin/users) section.
+:::
+
+### Rooms
+
+Rooms are the fourth-level entities in the system. Rooms represent a specific meeting or conference. Rooms can be associated with multiple customers or accounts, and each room can have multiple users associated with it.
+
+:::note
+You can find more information about rooms in the [Rooms](/docs/admin/rooms) section.
 :::
