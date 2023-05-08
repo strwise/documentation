@@ -1,6 +1,6 @@
 ---
 sidebar_position: 7
-sidebar_label: Settings
+sidebar_label: System Settings
 ---
 
 # Settings
