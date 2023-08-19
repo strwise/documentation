@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 3
 sidebar_label: Customers Management
 ---
 
@@ -23,13 +23,14 @@ The customer profile is the first step in creating a new customer. You can set t
 
 The system use the basic customer profile for account and services management and also as a lightweight customer relationship management (CRM) system. To create a **minimal customer profile**, set these properties:
 
-* **Email**: The customer’s email address. This is the primary identifier for the customer and is used to log in to the platform.
-* **Password**: The customer’s password. This is used to log in to the platform.
 * **Customer Type**: The type of customer. This can be either a business or a person.
 * **First Name**: The customer’s first name or main contact name.
 * **Last Name**: The customer’s last name or main contact name.
+* **Email**: The customer’s email address. This is the primary identifier for the customer and is used to log in to the platform.
 * **Company Name**: The customer’s company name (if applicable).
+* **Country**: The customer’s country.
 * **Currency**: The customer’s preferred currency.
+* **Password**: The customer’s password. This is used to log in to the platform.
 * **Status**: The customer’s status. This can be either active or inactive.
 
 :::caution
@@ -64,32 +65,6 @@ If you want to associate an existing user with the new customer, follow these st
 5. Select the user from the list.
 6. Click **Save**.
 
-## Editing a Customer
-
-Admins have the ability to edit a customer’s profile information. To edit a customer’s profile information, follow these steps:
-
-1. Click **Customers** in the top navigation menu.
-2. Click the customer you want to edit.
-3. Click **Edit**.
-4. Edit the customer’s profile information.
-5. Click **Save**.
-
-:::info
-If admin don't have permission to edit customers, the **Edit** button will not be displayed.
-:::
-
-## Deleting a Customer
-
-Admins have the ability to delete a customer. To delete a customer, follow these steps:
-
-1. Click **Customers** in the top navigation menu.
-2. Click the customer you want to delete.
-3. Click **Delete**.
-
-:::info
-If admin don't have permission to delete customers, the **Delete** button will not be displayed.
-:::
-
 ## Customer Properties
 
 ### Minimum Customer Profile
@@ -110,25 +85,20 @@ The platform can store additional information about the customer in the extended
 
 The current available properties for extended customer profile are:
 
-| Property                     | Type             | Description                                                                                                                   | Example                            |
-|------------------------------|------------------|-------------------------------------------------------------------------------------------------------------------------------|------------------------------------|
-| external_id                  | string (250)     | Third party customer ID.                                                                                                      | 123-456-789                        |
-| key                          | string (10)      | Unique customer key used for internal reference (auto generated).                                                             | a4rTrsag7                          |
-| prefix                       | string (10)      | Unique Customer prefix. Used to generate personalized unique records.                                                         | ABC                                |
-| url                          | string (250)     | Customer website URL. Used to personalize                                                                                     | https://www.mimirtech.co           |
-| logo_url                     | string (250)     | Customer logo URL.                                                                                                            | https://www.mimirtech.co/logo.png  |
-| hostname                     | string (250)     | Customer hostname. Used to personalized domain brand access.                                                                  | mimirtech.co                       |
-| subdomain                    | string (250)     | Customer subdomain. Used to personalized domain brand access.                                                                 | mimirtech                          |
-| credit                       | integer          | Positive credit balance available to customer.                                                                                | 1000                               |
-| balance                      | integer          | Current balance available to customer.                                                                                        | 1000                               |
-| delinquent                   | boolean          | Indicates if customer is delinquent, that is, it has a positive balance.                                                      | false                              |
-| tax_exempt                   | boolean          | Indicates if customer is tax exempt.                                                                                          | false                              |
-| late_fee_override            | boolean          | Indicates if customer is late fee override.                                                                                   | false                              |
-| override_due_notices         | boolean          | Indicates if customer is override due notices.                                                                                | false                              |
-| separate_invoices            | boolean          | Indicates if customer is separate invoices.                                                                                   | false                              |
-| allow_account_registration   | boolean          | Indicates if customer can register accounts directly. Default to `false`.                                                     | false                              |
-| allowed_origins              | string (250)     | Allowed origins for CORS. Values as separated by comma. Necessary when customer uses its own domain to access API resources.  | mimirtech.co,mimirtech.net         |
-| allowed_registration_origins | string (250)     | Indicates the allowed domains for registering accounts for the customer. For example: domain.com will only allow accounts with e-mail ending in "@domain.com" to be registered.                                                                       | mimirtech.co                       | 
+| Property                     | Type         | Description                                                                                                                                                                     | Example                           |
+|:-----------------------------|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------|
+| external_id                  | string (250) | Third party customer ID.                                                                                                                                                        | 123-456-789                       |
+| customer_key                 | string (10)  | Unique customer key used for internal reference (auto generated).                                                                                                               | a4rTrsag7                         |
+| customer_prefix              | string (10)  | Unique Customer prefix. Used to generate personalized unique records.                                                                                                           | ABC                               |
+| url                          | string (250) | Customer website URL. Used in public links and brand.                                                                                                                           | https://www.mimirtech.co          |
+| logo                         | string (250) | Customer logo URL. Used for brand.                                                                                                                                              | https://www.mimirtech.co/logo.png |
+| hostname                     | string (250) | Unique custom hostname for the customer. Used in custom resources configuration with personalized domain access.                                                                | meet.mimirtech.co                 |
+| subdomain                    | string (250) | Customer subdomain. Used to personalized domain brand access.                                                                                                                   | mimirtech                         |
+| credit                       | integer      | Positive credit balance available to customer.                                                                                                                                  | 1000                              |
+| balance                      | integer      | Current balance available to customer.                                                                                                                                          | 1000                              |
+| delinquent                   | boolean      | Indicates if customer last invoice was charged successfully.                                                                                                                    | false                             |
+| allowed_domains_origins      | string (250) | Allowed origins for CORS. Values as separated by comma. Necessary when customer uses its own domain to access API resources.                                                    | mimirtech.co,mimirtech.net        |
+| allowed_domains_registration | string (250) | Indicates the allowed domains for registering accounts for the customer. For example: domain.com will only allow accounts with e-mail ending in "@domain.com" to be registered. | mimirtech.co                      | 
 
 
 :::info
@@ -137,129 +107,92 @@ In addition to the customer extended profile, the platform also provides a set o
 
 ## Customer Attributes
 
-### Customer Settings
+### Customer Settings {#settings}
 
 The `customer_settings` is a key-value pairs that store additional structured data used by the platform to configure additional information like service quotas, limits, and other settings.
 
 At moment, the platform supports the following settings:
 
-| Key               | Type    | Description                                               | Value                        |
-|-------------------|---------|-----------------------------------------------------------|------------------------------|
-| max_accounts      | integer | Maximum number of allowed accounts for customer.          | `0` or unset to unlimited    |
-| max_rooms         | integer | Maximum number of allowed rooms for customer.             | `0` or unset to unlimited    |
-| max_participants  | integer | Maximum number of allowed participants for customer.      | `0` or unset to unlimited    |
-| max_duration      | integer | Maximum length in minutes that a customer can run a room. | `0` or unset to unlimited    |
-| max_storage       | integer | Maximum storage in GB that a customer can use.            | `0` or unset to unlimited    |
-| max_recordings    | integer | Maximum number of recordings that a customer can have.    | `0` or unset to unlimited    |
-| record_expiration | integer | Number of days that recordings will be kept.              | `0` or unset to unlimited    |
+|        Key        | Type    | Description                                               | Value                             |
+|:-----------------:|---------|-----------------------------------------------------------|-----------------------------------|
+|        url        | string  | Customer website URL. Used in public links and brand.     | https://www.mimirtech.co          |
+|       logo        | string  | Customer logo URL. Used for brand.                        | https://www.mimirtech.co/logo.png |
 
-#### max_accounts
-
-The `max_accounts` setting is used to set the maximum number of accounts that can be created for the customer. This setting is used to limit the number of accounts that can be created for the customer. If the setting is not set, the customer can create an unlimited number of accounts.
-
-* **Key:** `max_accounts`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-#### max_rooms
-
-The `max_rooms` setting is used to set the maximum number of rooms that can be created for the customer. This setting is used to limit the number of rooms that can be created for the customer. If the setting is not set, the customer can create an unlimited number of rooms.
-
-* **Key:** `max_rooms`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+:::note
+`customer_settings` attribute **only recognize predefined keys**. Any other key will be ignored.
 :::
 
-#### max_participants
-
-The `max_participants` setting is used to set the maximum number of participants that a customer can have simultaneously watching or interacting in all there rooms at the same time. This setting is used to limit the number of participants that can be in all the rooms at the same time. If the setting is not set, the customer can have an unlimited number of participants.
-
-* **Key:** `max_participants`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+:::info
+Some `customer_settings` properties can be set by top-level properties of the [Customer](/docs/admin/customers) object in API requests. Please refer to API reference guide for more information.
 :::
 
-:::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
+
+
+### Customer Metadata {#metadata}
+
+The `customer_metadata` is a set of key-value pairs that can attached to a customer. This can be useful for storing additional information or third-party data, such as a customer ID from a CRM system or billing system.
+
+The metadata is stored as a JSON object. The keys are strings and the values can be strings, numbers, booleans, or null.
+
+| Key                                        | Type   | Value  | Description            |
+|--------------------------------------------|--------|--------|------------------------|
+| `customer_metadata['external_billing_id']` | string | `123`  | Third-party billing id |
+| `customer_metadata['external_crm_id']`     | string | `456`  | Third-party CRM id     |
+
+:::info
+Values are type hinted when possible. For example, if the value is `123`, the type will be `integer`. If the value is `true`, the type will be `boolean`. If the value is `null`, the type will be `null`.
 :::
 
-#### max_duration
-
-The `max_duration` setting is used to set the maximum length in minutes that a customer can run a room. This setting is used to limit the length of time that a room can be active. If the setting is not set, the customer can have an unlimited duration for the rooms.
-
-* **Key:** `max_duration`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
-:::
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
-:::
-
-#### max_storage
-
-The `max_storage` setting is used to set the maximum storage in GB that a customer can use. This setting is used to limit the amount of storage that can be used by the customer. If the setting is not set, the customer can use an unlimited amount of storage.
-
-* **Key:** `max_storage`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
-:::
-
-#### max_recordings
-
-The `max_recordings` setting is used to set the maximum number of recordings that a customer can have. This setting is used to limit the number of recordings that can be created by the customer. If the setting is not set, the customer can have an unlimited number of recordings.
-
-* **Key:** `max_recordings`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
-:::
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
-:::
-
-#### record_expiration
-
-The `record_expiration` setting is used to set the number of days that recordings will be kept. This setting is used to limit the number of days that a recording will be kept. If the setting is not set, the customer can have an unlimited number of days to keep the recordings.
-
-* **Key:** `record_expiration`
-* **Type:** `integer`
-* **Value:** `0` or unset to unlimited
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
-:::
-
-:::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
+:::note
+This is an example of how to set the `customer_metadata` attribute. The `customer_metadata` attribute can be set to any key-value pair.
 :::
 
 ### Address
 
-> Work in progress
-
 The customer address is the customer’s physical address. This is used to calculate taxes and shipping costs. The address can be set to the same as the billing address or can be set to a different address.
+
+:::note
+This is a polymorphic attribute. It means that others entities can have the same attribute.
+:::
+
+#### Address Attributes
+
+At the moment, the following attributes are supported:
+
+| Attribute | Type   | Description                                                                             | Example         |
+|-----------|--------|-----------------------------------------------------------------------------------------|-----------------|
+| address_type | string | The type of address. Can be `PostalAddress`  or `BillingAddress`.                        | `PostalAddress` |
+| default | boolean | Whether the address is the default address for the customer.                            | `true`          |
+| country | string | The country where the address is located. Two-letter country code (ISO 3166-1 alpha-2). | `US`            |
+| state | string | The state where the address is located.                                                 | `CA`            |
+| postal_code | string | The postal code of the address.                                                         | `94107`         |
+| city | string | The city where the address is located.                                                  | `San Francisco` |
+| address_line1 | string | The first line of the address.                                                          | `123 Market St` |
+| address_line2 | string | The second line of the address.                                                         | `Suite 101`     |
+| po_box | string | The PO Box of the address.                                                              | `PO Box 123`    |
+| building_bumber | string | The building number of the address.                                                     | `123`           |
+| complement | string | The complement of the address.                                                          | `Apt 101`       |
+
+### Telephone
+
+The customer telephone is the customer’s telephone number. This is used to contact the customer. The telephone can can be two types, `landline` or `mobile`.
+
+#### Telephone Attributes
+
+At the moment, the following attributes are supported:
+
+|        Attribute        | Type   | Description                                                                              | Example           |
+|:-----------------------:|--------|------------------------------------------------------------------------------------------|-------------------|
+|        `default`        | boolean | Whether the telephone is the default telephone for the customer.                         | `true`            |
+|    `telephone_type`     | string | The type of telephone. Can be `landline` or `mobile`.                                    | `landline`        |
+|        `number`         | string | The telephone number.                                                                    | `+1 415 555 1234` |
+|  `telephone_extension`  | string | The telephone extension.                                                                 | `123`             |
 
 ### Legal Document
 
 The legal document is any legal documents or legal information that can be associated with the customer. This can be used to store any legal data that can be used to identify or verify the customer as a legal entity on different jurisdictions.
 
-#### Legal Document Properties
+#### Legal Document Attributes
 
 * **Type**: The type of legal document. See all types available in the [Legal Document types](#legal-document-types).
 * **Country**: The country where the tax identification number was issued.
@@ -289,4 +222,45 @@ In addition to the legal document types listed above, the platform also **suppor
 
 For this, you can use the `value` property to store any information related, such as contract number, service order number and etc, and inform in `type` the value `other`.
 
+## Customer Limits and Quotas {#limits-quotas}
 
+Any customer can have limits and quotas set on it. These limits and quotas are used to control the resource usage by the customer, enforcing restrictions in determined resources like the number of accounts, participants, the duration of the room, the storage used, etc. You can use this limits as part of billing or subscription plans.
+
+:::info
+Customer limits and quotas are managed through [Subscriptions](/docs/admin/service-packages/subscriptions).
+:::
+
+
+## Customers Management {#management}
+
+### Customers List
+
+### Customers Details
+
+### Customers Users
+
+### Editing a Customer
+
+Admins have the ability to edit a customer’s profile information. To edit a customer’s profile information, follow these steps:
+
+1. Click **Customers** in the top navigation menu.
+2. Click the customer you want to edit.
+3. Click **Edit**.
+4. Edit the customer’s profile information.
+5. Click **Save**.
+
+:::info
+If admin don't have permission to edit customers, the **Edit** button will not be displayed.
+:::
+
+### Deleting a Customer
+
+Admins have the ability to delete a customer. To delete a customer, follow these steps:
+
+1. Click **Customers** in the top navigation menu.
+2. Click the customer you want to delete.
+3. Click **Delete**.
+
+:::info
+If admin don't have permission to delete customers, the **Delete** button will not be displayed.
+:::

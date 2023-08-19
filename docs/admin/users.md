@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 sidebar_label: Users Management
 ---
 
@@ -31,7 +31,19 @@ When an admin creates a new customer, this also creates a new user based on the 
 
 Customer/Account owners have all the possible permissions that a user can possess. They are also the only user who can send invitations from the account to new or existing users.
 
-## Managing Users in the Admin Area
+## Adding Users
+
+## User Properties
+
+## User Attributes
+
+### User Settings
+
+### User Metadata
+
+## User Management {#management}
+
+### Managing Users in the Admin Area
 
 Admins can view information about and manage individual accounts and their associated users, including resetting passwords, in the Users tab of an account's client profile.
 
@@ -39,7 +51,7 @@ Admins can view information about and manage individual accounts and their assoc
 Customer/Account ownership can only be transferred between users through the Admin Area.
 :::
 
-### Associating a User with a Customer
+#### Associating a User with a Customer
 
 To associate a user and customer:
 
@@ -49,5 +61,14 @@ To associate a user and customer:
 4. Check **Send Invite** to send an invitation email.
 5. Click **Associate User**.
 
+### Users Permissions
 
-## Users Permissions
+> Work in progress
+
+### Editing Users
+
+> Work in progress
+
+### Deleting Users
+
+> Work in progress
