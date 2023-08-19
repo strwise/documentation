@@ -1,5 +1,5 @@
 ---
-title: Packages
+title: Service Packages
 description: Service Package describe the specific goods or services you offer to your customers.
 sidebar_position: 2
 ---

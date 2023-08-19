@@ -1,5 +1,5 @@
 ---
-title: Features
+title: Service Features
 description: Service Features are the features that are available to the customer when they subscribe to a service.
 sidebar_position: 1
 ---
