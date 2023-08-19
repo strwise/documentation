@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 sidebar_label: Admins Management
+id: management
 ---
 
 # Administrators and Permissions
@@ -11,7 +12,7 @@ sidebar_label: Admins Management
 
 SaaS Video Streaming Resell Platform allows you to create admins who can access and use the [Admin Area](/docs/admin/overview#administration-area). These users are separate from the clients that access the Client Area. You can create individual accounts for each admin and use detailed controls to set what they're able to view and do for each area of functionality.
 
-## Administrator Users
+## Administrator Management
 
 You can create and manage admins, including assigning administrator roles, at `Configuration () > Manage Admins` in the Admin Area.
 
@@ -37,7 +38,7 @@ To create or manage admin:
 Administrators email address can not be changed after creation.
 :::
 
-### Creating or Managing Admin Roles
+### Creating or Managing Admin Roles {#admin-roles}
 
 The administrator roles allow you to fine tune exactly what each of your admin users can do within your SaaS Video Streaming Resell Platform administration area. Administrator roles allow you to set the permissions for different types of admins.
 
