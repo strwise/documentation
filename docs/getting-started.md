@@ -68,8 +68,8 @@ The platform is built around the following entities:
 
 * Customers
 * Accounts
-* Users
-* Rooms
+* [Users](#users)
+* [Rooms](#rooms)
 
 ### Customers
 
@@ -83,7 +83,7 @@ You can find more information about customers in the [Customers](/docs/admin/cus
 
 Accounts are the second-level entities in the system. Accounts are associated with a single customer, and this customer has all privileges over the account. Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation.
 
-Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have multiple users associated with it.
+Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have different types of resources associated with it, like rooms, users, recordings, etc.
 
 :::note
 You can find more information about accounts in the [Accounts](/docs/admin/accounts) section.
