@@ -23,21 +23,10 @@ To add an account, click on the **Accounts** menu item in the left sidebar. Then
 
 ### Account Settings {#settings}
 
-The `account_settings` is a key-value pairs that store additional structured data used by the platform to configure additional information like service quotas, limits, and other settings.
-
-At moment, the platform supports the following settings:
-
-|         Key         | Type    | Description                                               | Value                        |
-|:-------------------:|---------|-----------------------------------------------------------|------------------------------|
-|      max_rooms      | integer | Maximum number of allowed rooms for customer.             | `0` or unset to unlimited    |
-|  max_participants   | integer | Maximum number of allowed participants for customer.      | `0` or unset to unlimited    |
-|    max_duration     | integer | Maximum length in minutes that a customer can run a room. | `0` or unset to unlimited    |
-|     max_storage     | integer | Maximum storage in GB that a customer can use.            | `0` or unset to unlimited    |
-|   max_recordings    | integer | Maximum number of recordings that a customer can have.    | `0` or unset to unlimited    |
-|  record_expiration  | integer | Number of days that recordings will be kept.              | `0` or unset to unlimited    |
+The `account_settings` is a key-value pairs that store additional structured data used internally to configure additional information attached to an account.
 
 :::info
-`account_settings` attribute **only recognize predefined keys**. Any other key will be ignored.
+`account_settings` attributes are read-only and can only be set by the platform.
 :::
 
 ### Account Metadata {#metadata}
@@ -63,9 +52,6 @@ Any account can have limits and quotas set on it. These limits and quotas are us
 Account limits and quotas are managed by [Account Settings](#settings) attribute.
 :::
 
-:::caution
-Any limit or quota set in the account will override the global limit or quota set in the customer limited by the maximum corresponding limit or quota set in the customer.
-:::
 
 ## Account Management {#management}
 
