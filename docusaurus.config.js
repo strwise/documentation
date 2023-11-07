@@ -73,7 +73,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://video-stream-platform-api-reference.pages.dev/',
+            href: 'https://video-stream-platform-api-reference.pages.dev/private/',
             position: 'left',
             label: 'API Reference',
           },
