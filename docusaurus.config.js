@@ -73,9 +73,14 @@ const config = {
             label: 'Docs',
           },
           {
-            href: 'https://video-stream-platform-api-reference.pages.dev/private/',
+            href: 'https://api-reference.streamwise.online/private/',
             position: 'left',
-            label: 'API Reference',
+            label: 'API Reference (private)',
+          },
+          {
+            href: 'https://api-reference.streamwise.online/public/',
+            position: 'left',
+            label: 'API Reference (public)',
           },
         ],
       },
@@ -112,8 +117,12 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'API Reference',
-                href: 'https://video-stream-platform-api-reference.pages.dev/',
+                label: 'API Reference (private)',
+                href: 'https://api-reference.streamwise.online/private',
+              },
+              {
+                label: 'API Reference (public)',
+                href: 'https://api-reference.streamwise.online/public',
               },
               {
                 label: 'GitHub',
