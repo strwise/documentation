@@ -5,9 +5,11 @@ sidebar_label: 'Overview'
 
 # Overview
 
-> Work in progress
+StreamWise Platform has native integrations with popular video streaming platforms. This allows you to easily connect your video streaming platform to StreamWise and start using the platform.
 
 ## Integrations
+
+Following is the list of video streaming platforms that StreamWise has native integrations with:
 
 ### Vimeo
 
