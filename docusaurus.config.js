@@ -14,7 +14,7 @@ const config = {
   noIndex: true,
 
   // Set the production url of your site here
-  url: 'https://video-stream-platform-documentation.pages.dev',
+  url: 'https://docs.streamwise.online',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
