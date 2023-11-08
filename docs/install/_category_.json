@@ -1,8 +1,0 @@
-{
-  "label": "Install & Configure",
-  "position": 4,
-  "link": {
-    "type": "generated-index",
-    "description": "This section provides an overview of the architecture options of installing SaaS Video Streaming Resell Platform, describing advantages of each option. It also provides instructions for installing Rancher on a single node, a cluster of nodes, or a cluster of nodes with a load balancer."
-  }
-}

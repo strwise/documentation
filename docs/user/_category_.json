@@ -1,8 +1,5 @@
 {
   "label": "User Guide",
   "position": 7,
-  "link": {
-    "type": "generated-index",
-    "description": "Compreehensive user guide for Web Video Stream Resell Platform. This section contains all user related documentation."
-  }
+  "link": null
 }
