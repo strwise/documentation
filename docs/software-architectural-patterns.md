@@ -1,6 +1,6 @@
 ---
 sidebar_position: 15
-sidebar_label: Architecture
+sidebar_label: Software Architecture
 ---
 
 # Software Architecture

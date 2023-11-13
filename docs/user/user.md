@@ -7,7 +7,7 @@ sidebar_label: User
 
 ## Overview
 
-In PaaS Video Streaming Resell System, users can own client accounts. This allows one user to manage products and services, billing, and other functions for multiple client accounts using a single login. 
+In StreamWise platform, users can own client accounts. This allows one user to manage products and services, billing, and other functions for multiple client accounts using a single login. 
 
 ## Invitations
 
