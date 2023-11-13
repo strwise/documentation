@@ -3,13 +3,11 @@ sidebar_position: 1
 sidebar_label: Overview
 ---
 
-# Video Streaming Resell Platform
+# Overview
 
-## Overview
+**StreamWise** is a comprehensive, powerful and user-friendly **all-in-one self-hosted SaaS platform** that allows businesses of all sizes to **resell video streaming services** and **web meeting services** such as:
 
-**Web Video Stream Resell Platform** is a comprehensive, powerful and user-friendly **all-in-one self-hosted SaaS platform** that allows businesses of all sizes to **resell video streaming services** such as:
-
-- Live streaming
+- Live streaming videos
 - Video on demand
 - Webinars
 - Web meetings
@@ -17,7 +15,15 @@ sidebar_label: Overview
 - Video chat
 - Video calling
 
-With **Web Video Stream Resell Platform**, businesses can provide their clients with high-quality video and meeting services on your own infrastructure, without the need to invest in expensive hardware and software. 
+With **StreamWise**, businesses can provide their clients with high-quality web video and web meeting services on your own infrastructure and brand, without the need to invest in expensive hardware and software. 
+
+### Web Meeting Resell Platform
+
+Resell web meeting services such as webinars, web meetings, video conferencing, video chat and video calling. With StreamWise, you can also provide your clients with a complete web meeting platform, including a web meeting website and a web meeting app.
+
+### Video Streaming Resell Platform
+
+Resell video streaming services such as live-streaming videos and video on demand. With StreamWise, you can also provide your clients with a complete video streaming platform, including a video streaming website and a video streaming app.
 
 ## About this Documentation
 
