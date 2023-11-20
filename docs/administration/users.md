@@ -9,11 +9,11 @@ sidebar_label: Users Management
 
 ## Overview
 
-The user management system in **SaaS Video Streaming Resell Platform** is designed to provide flexible and secure authentication and authorization across multiple customers and accounts. By allowing a single user to access multiple accounts, the platform enables streamlined management of services, billing, and support.
+The user management system is designed to provide flexible and secure authentication and authorization across multiple customers and accounts. By allowing a single user to access multiple accounts, the platform enables streamlined management of services, billing, and support.
 
 This separation of authentication and authorization from services, billing, and support offers an added layer of security and control over your services. The platform offers granular user permission and access control, allowing you to easily manage and monitor user access levels.
 
-In addition to user management, the platform offers robust [customer management features](/docs/admin/customers). Customers can manage their own accounts, including updating billing information, adding or removing services, and granting access to other users.
+In addition to user management, the platform offers robust [customer management features](/docs/administration/customers). Customers can manage their own accounts, including updating billing information, adding or removing services, and granting access to other users.
 
 Overall, our user and account management features provide maximum flexibility and control over your services, while ensuring the highest levels of security and privacy for your customers. Whether you're managing a small business or a large enterprise, the Video Streaming Resell Platform offers the tools and features you need to succeed in the world of video streaming.
 
@@ -31,25 +31,17 @@ When an admin creates a new customer, this also creates a new user based on the 
 
 Customer/Account owners have all the possible permissions that a user can possess. They are also the only user who can send invitations from the account to new or existing users.
 
-## Adding Users
+## User Properties {#properties}
 
-## User Properties
+## User Attributes {#attributes}
 
-## User Attributes
+### User Settings {#settings}
 
-### User Settings
-
-### User Metadata
+### User Metadata {#metadata}
 
 ## User Management {#management}
 
-### Managing Users in the Admin Area
-
-Admins can view information about and manage individual accounts and their associated users, including resetting passwords, in the Users tab of an account's client profile.
-
-:::caution
-Customer/Account ownership can only be transferred between users through the Admin Area.
-:::
+### Creating Users
 
 #### Associating a User with a Customer
 
