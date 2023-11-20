@@ -76,7 +76,7 @@ The platform is built around the following entities:
 Customers are the top-level entities in the system, they represent a billable party, like a business or person. Customers can own multiple accounts and rooms, and each customer can have multiple users associated with it.
 
 :::note
-You can find more information about customers in the [Customers](/docs/admin/customers) section.
+You can find more information about customers in the [Customers](/docs/administration/customers) section.
 :::
 
 ### Accounts
@@ -86,7 +86,7 @@ Accounts are the second-level entities in the system. Accounts are associated wi
 Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have different types of resources associated with it, like rooms, users, recordings, etc.
 
 :::note
-You can find more information about accounts in the [Accounts](/docs/admin/accounts) section.
+You can find more information about accounts in the [Accounts](/docs/administration/accounts) section.
 :::
 
 ### Users
@@ -96,7 +96,7 @@ Users are the third-level entities in the system. Users represent a person who c
 Each user can own different customers and accounts. Each user can have multiple roles associated with it.
 
 :::note
-You can find more information about users in the [Users](/docs/admin/users) section.
+You can find more information about users in the [Users](/docs/administration/users) section.
 :::
 
 ### Rooms
@@ -104,5 +104,5 @@ You can find more information about users in the [Users](/docs/admin/users) sect
 Rooms are the fourth-level entities in the system. Rooms represent a specific meeting or conference. Rooms can be associated with multiple customers or accounts, and each room can have multiple users associated with it.
 
 :::note
-You can find more information about rooms in the [Rooms](/docs/admin/rooms) section.
+You can find more information about rooms in the [Rooms](/docs/administration/rooms) section.
 :::

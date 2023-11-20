@@ -50,7 +50,7 @@ To create a new customer, follow these steps:
 If admin don't have permission to create customers, the **Add Customer** button will not be displayed.
 :::
 
-When a new customer is created, a new [user](/docs/admin/users) based on the customer profile is also created. This user becomes the customer owner, with each customer having only a single user owner, as the same occurs for account creation. This owner user has full permissions to manage the customer data.
+When a new customer is created, a new [user](/docs/administration/users) based on the customer profile is also created. This user becomes the customer owner, with each customer having only a single user owner, as the same occurs for account creation. This owner user has full permissions to manage the customer data.
 
 #### Associate with an existing user
 
@@ -123,7 +123,7 @@ At moment, the platform supports the following settings:
 :::
 
 :::info
-Some `customer_settings` properties can be set by top-level properties of the [Customer](/docs/admin/customers) object in API requests. Please refer to API reference guide for more information.
+Some `customer_settings` properties can be set by top-level properties of the [Customer](/docs/administration/customers) object in API requests. Please refer to API reference guide for more information.
 :::
 
 
@@ -227,7 +227,7 @@ For this, you can use the `value` property to store any information related, suc
 Any customer can have limits and quotas set on it. These limits and quotas are used to control the resource usage by the customer, enforcing restrictions in determined resources like the number of accounts, participants, the duration of the room, the storage used, etc. You can use this limits as part of billing or subscription plans.
 
 :::info
-Customer limits and quotas are managed through [Subscriptions](/docs/admin/service-packages/subscriptions).
+Customer limits and quotas are managed through [Subscriptions](/docs/administration/service-packages/subscriptions).
 :::
 
 

@@ -162,7 +162,7 @@ This is an example of how to set the `room_metadata` attribute. The `room_metada
 Any room can have limits and quotas set on it. These limits and quotas are used to control the resource usage of the room by the customer, enforcing restrictions in determined resources like the number of participants, the duration of the room, the storage used, etc. You can use this limits as part of billing or subscription plans.
 
 :::info
-Room limits and quotas are managed through [Subscriptions](/docs/admin/service-packages/subscriptions).
+Room limits and quotas are managed through [Subscriptions](/docs/administration/service-packages/subscriptions).
 :::
 
 ## Room Management {#management}

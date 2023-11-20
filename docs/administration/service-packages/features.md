@@ -8,7 +8,7 @@ Features are the features that are available to the customer when they subscribe
 
 A feature represents a resource that the customer can consume or access through a [package](packages). For example, a feature can represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer have to a web meeting.
 
-## Feature Properties
+## Feature Properties {#properties}
 
 | Property         | Type           | Description                                                                                                                         |
 |------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------|
@@ -35,7 +35,7 @@ A feature represents a resource that the customer can consume or access through 
 #### Feature Settings
 #### Feature Metadata
 
-## Available Features
+## Available Features 
 
 The application has a predefined set of features that can be used to define the features of a package. The following table describes the available features.
 
@@ -71,7 +71,7 @@ The `max_rooms` setting is used to set the maximum number of rooms that can be c
 * **Value:** `0` or unset to unlimited
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+This property can be overridden by the `record_expiration` property of the [Account](/docs/administration/accounts) object.
 :::
 
 #### max_participants
@@ -83,11 +83,11 @@ The `max_participants` setting is used to set the maximum number of participants
 * **Value:** `0` or unset to unlimited
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+This property can be overridden by the `record_expiration` property of the [Account](/docs/administration/accounts) object.
 :::
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
+This property can be overridden by the `record_expiration` property of the [Room](/docs/administration/rooms) object.
 :::
 
 #### max_duration
@@ -99,11 +99,11 @@ The `max_duration` setting is used to set the maximum length in minutes that a c
 * **Value:** `0` or unset to unlimited
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+This property can be overridden by the `record_expiration` property of the [Account](/docs/administration/accounts) object.
 :::
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
+This property can be overridden by the `record_expiration` property of the [Room](/docs/administration/rooms) object.
 :::
 
 #### max_storage
@@ -115,7 +115,7 @@ The `max_storage` setting is used to set the maximum storage in GB that a custom
 * **Value:** `0` or unset to unlimited
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+This property can be overridden by the `record_expiration` property of the [Account](/docs/administration/accounts) object.
 :::
 
 #### max_recordings
@@ -127,11 +127,11 @@ The `max_recordings` setting is used to set the maximum number of recordings tha
 * **Value:** `0` or unset to unlimited
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+This property can be overridden by the `record_expiration` property of the [Account](/docs/administration/accounts) object.
 :::
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
+This property can be overridden by the `record_expiration` property of the [Room](/docs/administration/rooms) object.
 :::
 
 #### record_expiration
@@ -143,9 +143,9 @@ The `record_expiration` setting is used to set the number of days that recording
 * **Value:** `0` or unset to unlimited
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Account](/docs/admin/accounts) object.
+This property can be overridden by the `record_expiration` property of the [Account](/docs/administration/accounts) object.
 :::
 
 :::tip
-This property can be overridden by the `record_expiration` property of the [Room](/docs/admin/rooms) object.
+This property can be overridden by the `record_expiration` property of the [Room](/docs/administration/rooms) object.
 :::

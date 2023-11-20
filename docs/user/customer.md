@@ -13,6 +13,6 @@ When creating a new customer, a user will be crated with the same email address 
 
 :::info
 
-An existing user can be associated upon customer creation prior to create a new. Please refer to [Customer Administration](/docs/admin/customers) section for more information. 
+An existing user can be associated upon customer creation prior to create a new. Please refer to [Customer Administration](/docs/administration/customers) section for more information. 
 
 :::
