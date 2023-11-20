@@ -7,3 +7,4 @@
 /docs/install/backups /docs/deploy/backups 301
 /docs/install/backups/ /docs/deploy/backups/ 301
 /docs/admin/* /docs/administration/:splat
+/docs/administration/management /docs/administration/admins 301

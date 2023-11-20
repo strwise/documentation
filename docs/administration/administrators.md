@@ -1,7 +1,7 @@
 ---
 sidebar_position: 2
 sidebar_label: Admins Management
-id: management
+id: admins
 ---
 
 # Administrators and Permissions
