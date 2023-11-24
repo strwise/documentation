@@ -70,7 +70,7 @@ Accounts users can have different permissions associated with them. The permissi
 Any account can have limits and quotas set on it. These limits and quotas are used to control the resource usage of the account by the customer, enforcing restrictions in determined resources like the number of rooms, participants, the duration of the room, the storage used, etc. You can use this limits as part of your billing strategy.
 
 :::note
-You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/service-packages/subscriptions#features) section. 
+You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions/features) section. 
 
 :::
 

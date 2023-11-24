@@ -227,7 +227,7 @@ For this, you can use the `value` property to store any information related, suc
 Any customer can have limits and quotas set on it. These limits and quotas are used to control the resource usage by the customer, enforcing restrictions in determined resources like the number of accounts, participants, the duration of the room, the storage used, etc. You can use this limits as part of billing or subscription plans.
 
 :::info
-Customer limits and quotas are managed through [Subscriptions](/docs/administration/service-packages/subscriptions).
+Customer limits and quotas are managed through [Subscriptions](/docs/administration/subscriptions).
 :::
 
 
