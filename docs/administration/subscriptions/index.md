@@ -1,7 +1,7 @@
 ---
-title: Service Subscriptions
+title: Overview
 description: Subscriptions are the subscriptions that are available to the customer when they subscribe to a service.
-sidebar_position: 2
+sidebar_position: 0
 ---
 
 # Service Subscriptions
