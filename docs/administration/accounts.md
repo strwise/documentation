@@ -7,9 +7,15 @@ sidebar_label: Accounts Management
 
 ## Overview
 
-Accounts are the second-level entities in the system. Accounts represent a specific service, like a video streaming service or web meeting service. Accounts hold all the data related to the service, like users, rooms, recordings, media, etc.
+Accounts are the second-level entities in the system. Accounts represent a specific service, like a video streaming service or web meeting service. Accounts hold all the data related to the service, like rooms, meeting statistics, recordings, media, etc.
 
-Accounts are always bound to a subscription. When an account is created, it is associated with a subscription. The subscription defines the service that the account will have access to. The subscription also defines the features and quotas that will be available to the account. 
+:::note
+
+Accounts are always bound to a subscription.
+
+:::
+
+Accounts are always associated to a subscription. The subscription defines the service that the account will have access to, also features and quotas that will be available to the account. 
 
 Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation.
 
@@ -17,22 +23,46 @@ Accounts can have multiple users associated with them. Each account can have onl
 
 Below is a list of the properties that are available for an account.
 
-| Property      | Type   | Description                                       | Example      |
-|---------------|--------|---------------------------------------------------|--------------|
-| id            | string | The unique identifier of the account.             | `123`        |
-| uuid          | string | The unique identifier of the account.             | `123`        |
-| ulid          | string | The unique identifier of the account.             | `123`        |
-| account_name  | string | The name of the account.                          | `My Account` |
-| account_key   | string | The unique key of the account.                    | `my-account` |
-| tag           | string | The tag of the account.                           | `my-account` |
-| code          | string | The code of the account.                          | `my-account` |
-| subscriber_id | string | The unique identifier of the customer subscriber. | `123`        |
-| subscription_id | string | The unique identifier of the subscription. | `123`        |
-| status        | enum   | The status of the account.                        | `active`     |
+| Property         | Type   | Description                                                         | Example      |
+|------------------|--------|---------------------------------------------------------------------|--------------|
+| id               | string | The unique identifier of account.                                   | `123`        |
+| uuid             | string | The Universally Unique Identifier of account                        | `123`        |
+| ulid             | string | The universally unique lexicographically identifier of the account. | `123`        |
+| account_name     | string | The name of the account.                                            | `My Account` |
+| account_key      | string | The unique key of the account.                                      | `my-account` |
+| tag              | string | The tag of the account.                                             | `my-account` |
+| code             | string | The code of the account.                                            | `my-account` |
+| subscriber_id    | string | The unique identifier of the customer subscriber.                   | `123`        |
+| subscription_id  | string | The unique identifier of the subscription.                          | `123`        |
+| status           | enum   | The status of the account.                                          | `active`     |
+| account_settings | array  | The account settings.                                               | `{}`         |
+| account_metadata | array  | The account metadata.                                               | `{}`         |
 
 ## Account Features {#features}
 
-> coming soon
+Account features are always set and enforced by subscription features. Accounts will share all available features in the subscription.
+
+:::note
+You can find more about Subscription Features at [Subscription Features](/docs/administration/subscriptions/features) section.
+:::
+
+## Account Limits and Quotas {#limits-quotas}
+
+Accounts limits and quotas are defined by the subscription features limits and quotas.
+
+Any account can have limits and quotas set on it. These limits and quotas are used to control the resource usage of the account by the customer, enforcing restrictions in determined resources like the number of rooms, participants, the duration of the room, the storage used, etc. You can use this limits as part of your billing strategy.
+
+:::note
+You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions/features) section.
+
+:::
+
+Account limits and quotas will always be enforced by the subscription features limits and quotas, and all accounts will share the same limits and quotas defined by the subscription features. For example, if you have a subscription feature that limits the number of rooms to 10, all accounts will share the same limit of 10 rooms.
+
+
+:::info
+Custom account limits and quotas are managed by [Account Features](#features) attribute.
+:::
 
 ## Account Attributes
 
@@ -64,25 +94,6 @@ This is an example of how to set the `account_metadata` attribute. The `acccount
 Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is the default customer user owner.
 
 Accounts users can have different permissions associated with them. The permissions define what the user can do in the account. For example, a user can have the permission to create rooms, but not to delete rooms.
-
-## Account Limits and Quotas {#limits-quotas}
-
-Any account can have limits and quotas set on it. These limits and quotas are used to control the resource usage of the account by the customer, enforcing restrictions in determined resources like the number of rooms, participants, the duration of the room, the storage used, etc. You can use this limits as part of your billing strategy.
-
-:::note
-You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions/features) section. 
-
-:::
-
-Account limits and quotas will always be enforced by the subscription features limits and quotas, and all accounts will share the same limits and quotas defined by the subscription features. For example, if you have a subscription feature that limits the number of rooms to 10, all accounts will share the same limit of 10 rooms.
-
-
-If you have a subscription feature that limits the number of participants to 100, all accounts will have a limit of 100 participants.
-
-:::info
-Custom account limits and quotas are managed by [Account Features](#features) attribute.
-:::
-
 
 ## Account Management {#management}
 
