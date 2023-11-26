@@ -38,33 +38,6 @@ Below is a list of the properties that are available for an account.
 | account_settings | array  | The account settings.                                               | `{}`         |
 | account_metadata | array  | The account metadata.                                               | `{}`         |
 
-## Account Features {#features}
-
-Account features are always set and enforced by subscription features. Accounts will share all available features in the subscription.
-
-:::note
-You can find more about Subscription Features at [Subscription Features](/docs/administration/subscriptions/features) section.
-:::
-
-## Account Limits and Quotas {#limits-quotas}
-
-Accounts limits and quotas are defined by the subscription features limits and quotas.
-
-Any account can have limits and quotas set on it. These limits and quotas are used to control the resource usage of the account by the customer, enforcing restrictions in determined resources like the number of rooms, participants, the duration of the room, the storage used, etc. You can use this limits as part of your billing strategy.
-
-:::note
-You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions/features) section.
-
-:::
-
-Account limits and quotas will always be enforced by the subscription features limits and quotas, and all accounts will share the same limits and quotas defined by the subscription features. For example, if you have a subscription feature that limits the number of rooms to 10, all accounts will share the same limit of 10 rooms.
-
-
-:::info
-Custom account limits and quotas are managed by [Account Features](#features) attribute.
-:::
-
-## Account Attributes
 
 ### Account Settings {#settings}
 
@@ -89,11 +62,36 @@ The metadata is stored as a JSON object. The keys are strings and the values can
 This is an example of how to set the `account_metadata` attribute. The `acccount_metadata` attribute can be set to any key-value pair.
 :::
 
+## Account Features {#features}
+
+Account features are always set and enforced by subscription features. Accounts will share all available features in the subscription.
+
+:::note
+You can find more about Subscription Features at [Subscription Features](/docs/administration/subscriptions/features) section.
+:::
+
+### Account Limits and Quotas {#limits-quotas}
+
+> Accounts limits and quotas are enforced by the subscription features limits and quotas.
+
+Account limits and quotas are used to control the resource usage of the account by the customer, enforcing restrictions in determined resources like the number of rooms, participants, the duration of the room, the storage used, etc. You can use this limits as part of your billing strategy.
+
+:::note
+You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions/features) section.
+
+:::
+
+Account limits and quotas will always be enforced by the subscription features limits and quotas, and all accounts will share the same limits and quotas defined by the subscription features. 
+
+For example, if you have a subscription feature that limits the number of rooms to 10, all accounts will share the same limit of 10 rooms.
+
 ## Accounts Users {#users}
 
 Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is the default customer user owner.
 
 Accounts users can have different permissions associated with them. The permissions define what the user can do in the account. For example, a user can have the permission to create rooms, but not to delete rooms.
+
+Permissions are define individually for each account user. The permissions are defined by the account owner or by the platform administrator.
 
 ## Account Management {#management}
 
@@ -118,6 +116,10 @@ Account details can be performed by the platform administrator with the right pe
 Account details can be performed by GET request to the `/accounts/{account_id}` endpoint. Please check the API reference for more information.
 
 ### Accounts Users
+
+Customer owner can invite users to the account. The invited user will receive an email with a link to create an account and set a password. The invited user will be able to access the account and perform actions according to the permissions defined for the user.
+
+System administrators with right permissions can add users to accounts. Different from customer owner, system administrators don't invite users to the account, but add existing users to the account. The invited user will be able to access the account and perform actions according to the permissions defined. If user do not exist, the system administrator will need to create the user first.
 
 ### Editing an Account
 
