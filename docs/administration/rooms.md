@@ -533,7 +533,7 @@ Rooms can be listed by platform administrators that has the need permissions gra
 
 :::note API Queries
 
-For all API method and more information about query parameters please refer to the [API Resources](/docs/api/api-resources).
+For all API method and more information about query parameters please refer to the [API Resources](/docs/api/resources).
 
 :::
 
