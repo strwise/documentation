@@ -1,4 +1,5 @@
 ---
+title: API Overview
 sidebar_position: 1
 sidebar_label: Overview
 ---
@@ -6,6 +7,18 @@ sidebar_label: Overview
 # API Overview
 
 The API is a RESTful API that uses JSON for serialization and OAuth 2.0 for authentication. In this section, you will find information about the API resources and how to use them.
+
+## API Authentication
+
+The API uses OAuth 2.0 for authentication. To authenticate with the API, you need to create an OAuth 2.0 client and use the client credentials to authenticate with the API.
+
+> To see more about API authentication, see the [API Authentication](/docs/api/authentication) section.
+
+## API Resources
+
+The API is organized in resources. Each resource has a set of operations that can be performed on it. 
+
+> To see more about API resources, see the [API Resources](/docs/api/resources) section.
 
 ## Private API Reference
 

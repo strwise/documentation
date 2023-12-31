@@ -1,10 +1,12 @@
 ---
-title: Service Features
+title: Package Features
 description: Service Features are the features that are available to the customer when they subscribe to a service.
 sidebar_position: 1
 ---
 
-A feature represents a resource that the customer can consume or access through a [package](index). For example, a feature can represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer have to a web meeting. Packages can have multiple features, each one representing a different resource that the customer can consume or access.
+# Package Features
+
+A feature represents a resource that the customer can consume or access through a [Service Package](/docs/administration/service-packages). For example, a feature can represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer have to a web meeting. Packages can have multiple features, each one representing a different resource that the customer can consume or access.
 
 ## Feature Properties {#properties}
 
