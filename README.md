@@ -1,4 +1,9 @@
-# Website
+# StreamWise Documentation Repository
+
+
+Documentation avaliable at https://docs.streamwise.online/
+
+## Platform
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
 
