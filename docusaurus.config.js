@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Documentation - Video Streaming Resell Platform',
-  tagline: 'Welcome to the PaaS Video Streaming Resell Platform, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.',
+  title: 'StreamWise - Video Streaming Resell Platform',
+  tagline: 'Welcome to StreamWise vPaaS, a Video Streaming Resell Platform. StreamWise is a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.',
   favicon: 'img/favicon.png',
 
   // disable indexing of the site
@@ -74,12 +74,12 @@ const config = {
           },
           {
             href: 'https://api-reference.streamwise.online/private/',
-            position: 'left',
+            position: 'right',
             label: 'API Reference (private)',
           },
           {
             href: 'https://api-reference.streamwise.online/public/',
-            position: 'left',
+            position: 'right',
             label: 'API Reference (public)',
           },
         ],
