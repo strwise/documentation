@@ -1,11 +1,21 @@
 ---
 sidebar_position: 1
+title: Service Providers
+sidebar_label: Overview
 ---
 
-# Overview
+# Service Providers
 
-Service Providers provide a way to register streaming service providers to the platform. The platform supports multiple service providers, and each service provider can be configured with different settings.
+## Overview
 
+
+The Service Provider is a crucial part of the platform. It allows the management of different service providers that can be used within the platform. Each service provider has its own properties, settings, and metadata. The service providers can be associated with different service packages and subscriptions.
+
+The platform supports multiple service providers from multiple vendors, and each service provider can be configured with different settings.
+
+With Service Provider feature, it is possible provide different services to different customers. For example, you can provide a BigBlueButton service to one customer and a Jitsi service to another customer.
+
+Thanks to the platform's multi-vendor architecture, it is possible to offer different Service Packages to meet the most varied needs of web meeting and video streaming solutions. The following is an overview of the service providers that can be used on the platform.
 
 ## Available Service Providers
 
@@ -120,11 +130,6 @@ Service Providers provide a way to register streaming service providers to the p
 > Coming Soon
 
 * website: https://docs.openvidu.io/en/stable/
-
-
-## Service Provider Properties
-
-## Service Provider Settings
 
 
 https://www.g2.com/categories/video-platform-as-a-service-vpaas
