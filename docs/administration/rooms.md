@@ -275,8 +275,8 @@ The `token` attribute is the unique string used in the URL to identify the room 
 The `role` attribute is a string that indicates the role of the token. The role can be one of the following values:
 
 * **moderator:** The token is a [Moderator token](#moderator-token).
-* **attendee:** The token is a participant token.
-* **guest:** The token is a guest token.
+* **attendee:** The token is a [Attendee token](#attendee-token).
+* **guest:** The token is a [Guest token](#guest-token).
 
 
 * **Key**: `role`
@@ -330,7 +330,7 @@ Consider the following scenario:
 
 A room of type **meet** with a **BigBlueButton** service provider is accessed with a attendee token. The user will be granted as attendee in the room. After start the meeting and get redirect to BigBlueButton, the user will be granted as attendee in the BigBlueButton meeting too. This will allow the user to join the BigBlueButton meeting as a participant.
 
-### Guest Token
+### Guest Token {#guest-token}
 
 Guest tokens is defined by the [Room Token role](#room-token-role) `guest`. When room is accessed with a guest token, the user will be granted guest access to the room. This privileges will allow the user to join the room as a guest. Depending on the [room type](#room-type) and [Service Provider](/docs/service-providers), the privileges will be extended to the service provider too, given the user the ability to join the service provider as a guest.
 
@@ -455,8 +455,8 @@ The `code` attribute is not encrypted and can be seen by anyone with access to t
 The `role` attribute is a string that indicates the role of the code. The role can be one of the following values:
 
 * **moderator:** The code is a [Moderator code](#moderator-code).
-* **attendee:** The code is a participant code.
-* **guest:** The code is a guest code.
+* **attendee:** The code is a [Participant code](#participant-code).
+* **guest:** The code is a [Guest code](#guest-code).
 
 :::info Important Note
 
@@ -478,16 +478,16 @@ The `last_usage` attribute is updated every time the code is used to access the 
 
 :::
 
-### Moderator Access Code
+### Moderator Access Code {#moderator-code}
 
 The moderator access code defined by the attribute `moderator`. When user authenticate with a moderator access code, they will be the respective role in the room.
 
 
-### Attendee Access Code
+### Attendee Access Code {#participant-code}
 
 The participant access code defined by the attribute `attendee`. When user authenticate with an attendee access code, they will be the respective role in the room.
 
-### Guest Access Code
+### Guest Access Code {#guest-code}
 
 The guest access code defined by the attribute `guest`. When user authenticate with a guest access code, they will be the respective role in the room.
 

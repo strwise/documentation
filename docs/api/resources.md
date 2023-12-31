@@ -2,6 +2,7 @@
 sidebar_position: 3
 sidebar_label: 'API Resources'
 id: api-resources
+slug: resources
 ---
 
 # API Resources
