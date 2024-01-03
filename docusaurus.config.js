@@ -6,7 +6,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'StreamWise - Video Streaming Resell Platform',
+  title: 'StreamWise - VPaaS Resell Platform',
   tagline: 'Welcome to StreamWise vPaaS, a Video Streaming Resell Platform. StreamWise is a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.',
   favicon: 'img/favicon.png',
 

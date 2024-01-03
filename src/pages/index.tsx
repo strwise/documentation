@@ -30,9 +30,9 @@ function HomepageHeader() {
 function Section () {
     return (
         <div className="container">
-        <h2 className="hero__subtitle" style={{marginTop: 7}}>PaaS Video Streaming Resell System</h2>
+        <h2 className="hero__subtitle" style={{marginTop: 7}}>StreamWise VPaaS Resell System</h2>
         <p>
-            Welcome to the <strong>PaaS Video Streaming Resell Platform</strong>, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.
+            Welcome to <strong>Video Platform as a Service Resell System</strong>, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.
         </p>
             <p>
                 Our platform is designed to be intuitive and easy to use, with API-centric software that allows for flexibility and control over your services. With our platform, you can create and manage your own video streaming services, adjust settings, and add branding to make it look and feel like your own.
