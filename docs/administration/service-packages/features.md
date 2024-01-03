@@ -72,6 +72,12 @@ The feature metadata.
 
 ## Available Features 
 
+:::info
+
+Features are managed by the platform and can't be created or updated.
+
+:::
+
 The platform has a predefined set of features that can be used to define the features of a package. The following table describes the available features.
 
 
