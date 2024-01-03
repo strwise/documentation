@@ -507,6 +507,12 @@ Rooms users can have different permissions associated with them. The permissions
 
 Permissions are define individually for each room user. The permissions are defined by the room or account owner or by system administrators.
 
+:::info
+
+Please refer to the [Users](/docs/administration/users) section for more information about users.
+
+:::
+
 ## Room Limits and Quotas {#limits-quotas}
 
 Any room can have limits and quotas set on it. These limits and quotas are used to control the resource usage of the room by the customer, enforcing restrictions in determined resources like the number of participants, the duration of the room, the storage used, etc. You can use this limits as part of billing or subscription plans.
