@@ -1,7 +1,6 @@
 ---
-title: Scalelite
+title: Scalelite Service Provider
 description: Scalelite is a service provider that provides a scalable and reliable BigBlueButton infrastructure.
-sidebar_position: 0
-sidebar_label: Overview
+sidebar_position: 2
+sidebar_label: Scalelite
 ---
-# Overview
