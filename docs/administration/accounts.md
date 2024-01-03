@@ -21,6 +21,8 @@ Accounts can have multiple users associated with them. Each account can have onl
 
 ## Account Properties
 
+### Account Attributes {#attributes}
+
 Below is a list of the properties that are available for an account.
 
 | Property         | Type   | Description                                                         | Example      |
@@ -62,7 +64,7 @@ The metadata is stored as a JSON object. The keys are strings and the values can
 This is an example of how to set the `account_metadata` attribute. The `acccount_metadata` attribute can be set to any key-value pair.
 :::
 
-## Account Features {#features}
+### Account Features {#features}
 
 Account features are always set and enforced by subscription features. Accounts will share all available features in the subscription.
 
@@ -93,6 +95,12 @@ Accounts users can have different permissions associated with them. The permissi
 
 Permissions are define individually for each account user. The permissions are defined by the account owner or by the platform administrator.
 
+:::info
+
+Please refer to the [Users](/docs/administration/users) section for more information about users.
+
+:::
+
 ## Account Management {#management}
 
 The platform administrator can manage accounts through the administration API. The platform administrator can create, edit, and delete accounts. The platform administrator can also list accounts and view account details.
@@ -101,13 +109,13 @@ The platform administrator can manage accounts through the administration API. T
 
 Accounts list can be performed by the platform administrator with the right permissions. Only customer user owner will be allowed to list accounts.
 
-Accounts list can be performed by GET request to the `/accounts` endpoint. Please check the API reference for more information.
+Accounts list can be performed by _GET_ request to the `/accounts` endpoint. Please check the API reference for more information.
 
 ### Create an Account
 
 Creating accounts can only be done by the platform administrator with the right permissions. Customers users will be allowed to create accounts if related subscription has feature `allow_create_account` enabled and the customer user has the right permissions.
 
-Create an account can be performed by POST request to the `/accounts` endpoint. Please check the API reference for more information.
+Create an account can be performed by _POST_ request to the `/accounts` endpoint. Please check the API reference for more information.
 
 ### Accounts Details
 
@@ -121,11 +129,13 @@ Customer owner can invite users to the account. The invited user will receive an
 
 System administrators with right permissions can add users to accounts. Different from customer owner, system administrators don't invite users to the account, but add existing users to the account. The invited user will be able to access the account and perform actions according to the permissions defined. If user do not exist, the system administrator will need to create the user first.
 
+Users account management can be performed by API request to the `/accounts/{account_id}/users` endpoint. Please check the API reference for more information.
+
 ### Editing an Account
 
 Editing accounts can only be done by the platform administrator with the right permissions. Customers users will be allowed only to edit **account features** and if they have the right permissions.
 
-> account features are not implemented yet.
+Editing an account can be performed by PATCH request to the `/accounts/{account_id}` endpoint. Please check the API reference for more information.
 
 ### Deleting an Account
 
