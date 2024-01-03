@@ -9,31 +9,6 @@ sidebar_label: Getting Started
 
 Welcome to the SaaS Video Streaming Resell System! This section will help you get started with the platform by covering the basics of administration, logging in, and navigating the platform's resources.
 
-## Configuring the Platform
-
-After the platform is installed, you'll need to configure it to suit your needs. We recommend that you configure **PaaS Video Streaming Resell Platform** in the following order:
-
-1. Perform the recommended Further Security Steps.
-2. Create your administration account.
-3. Configure your general settings.
-4. Configure your first BigBlueButton/Scalelite host.
-5. Create a customer to test the platform.
-
-## Setting Up Your Administration Account
-
-To get started, you'll need to create an administration account on the platform. After the platform is installed, you will be able to create an administration account by accessing the workspace container and executing the following command:
-
-```bash
-artisan vsp:admin:create
-```
-
-This command will prompt you to enter the following information:
-
-- **Name** - The name of the administration account.
-- **Email** - The email address of the administration account.
-- **Password** - The password of the administration account.
-
-Once you've entered the required information, the administration account will be created and you'll be able to log in to the platform.
 
 ## Logging In to the Platform
 
@@ -66,43 +41,43 @@ SaaS Video Streaming Resell Platform is a multi-tenant platform, which means tha
 
 The platform is built around the following entities:
 
-* Customers
-* Accounts
+* [Customers](#customers)
+* [Accounts](#accounts)
 * [Users](#users)
 * [Rooms](#rooms)
 
-### Customers
+### Customers {#customers}
 
 Customers are the top-level entities in the system, they represent a billable party, like a business or person. Customers can own multiple accounts and rooms, and each customer can have multiple users associated with it.
 
-:::note
+:::info
 You can find more information about customers in the [Customers](/docs/administration/customers) section.
 :::
 
-### Accounts
+### Accounts {#accounts}
 
 Accounts are the second-level entities in the system. Accounts are associated with a single customer, and this customer has all privileges over the account. Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation.
 
 Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have different types of resources associated with it, like rooms, users, recordings, etc.
 
-:::note
+:::info
 You can find more information about accounts in the [Accounts](/docs/administration/accounts) section.
 :::
 
-### Users
+### Users {#users}
 
 Users are the third-level entities in the system. Users represent a person who can access the platform and use or manage the services. Users can be associated with multiple customers or accounts, and each user can have multiple roles based on each permission granted and type of access for different customers and accounts. 
 
 Each user can own different customers and accounts. Each user can have multiple roles associated with it.
 
-:::note
+:::info
 You can find more information about users in the [Users](/docs/administration/users) section.
 :::
 
-### Rooms
+### Rooms {#rooms}
 
 Rooms are the fourth-level entities in the system. Rooms represent a specific meeting or conference. Rooms can be associated with multiple customers or accounts, and each room can have multiple users associated with it.
 
-:::note
+:::info
 You can find more information about rooms in the [Rooms](/docs/administration/rooms) section.
 :::

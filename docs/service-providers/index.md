@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 title: Service Providers
 sidebar_label: Overview
 ---
@@ -21,9 +21,13 @@ Thanks to the platform's multi-vendor architecture, it is possible to offer diff
 
 ### BigBlueButton
 
+BigBlueButton is an open source web conferencing system for online learning. The goal of the project is to provide remote students a high-quality online learning experience.
+
 * website: https://bigbluebutton.org/
 
 ### Scalelite
+
+Scalelite is a load balancer for BigBlueButton. It is a BigBlueButton plugin that allows you to scale your BigBlueButton infrastructure by adding more BigBlueButton servers.
 
 * website: https://github.com/blindsidenetworks/scalelite
 
@@ -34,6 +38,18 @@ Thanks to the platform's multi-vendor architecture, it is possible to offer diff
 > Coming Soon
 
 * website: https://jitsi.org/
+
+### Amazon Chime
+
+> Coming Soon
+
+* website: https://aws.amazon.com/chime/
+
+### Pexip
+
+> Coming Soon
+
+* website: https://www.pexip.com/
 
 ### Cloudflare Stream
 
@@ -47,9 +63,9 @@ Thanks to the platform's multi-vendor architecture, it is possible to offer diff
 
 * website: https://cloud.google.com/livestream/docs
 
-### Twilio Programmable Video
+### ~~Twilio Programmable Video~~
 
-> Coming Soon
+> ~~Coming Soon~~ service discontinued
 
 * website: https://www.twilio.com/docs/video
 
