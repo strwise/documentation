@@ -11,7 +11,7 @@ const config = {
   favicon: 'img/favicon.png',
 
   // disable indexing of the site
-  noIndex: true,
+  noIndex: false,
 
   // Set the production url of your site here
   url: 'https://docs.streamwise.online',
