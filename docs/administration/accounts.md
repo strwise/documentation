@@ -72,7 +72,7 @@ Account features are always set and enforced by subscription features. Accounts 
 You can find more about Subscription Features at [Subscription Features](/docs/administration/subscriptions/features) section.
 :::
 
-### Account Limits and Quotas {#limits-quotas}
+## Account Limits and Quotas {#limits-quotas}
 
 > Accounts limits and quotas are enforced by the subscription features limits and quotas.
 
@@ -95,6 +95,20 @@ Accounts users can have different permissions associated with them. The permissi
 
 Permissions are define individually for each account user. The permissions are defined by the account owner or by the platform administrator.
 
+### Inviting Users to an Account {#invite}
+
+There is two ways to grant access to new users:
+
+#### Invited by Customer Owner
+
+Customer owner can grant access to other users to accounts. The customer owner can also define the permissions of each user, allowing or restricting access to determined resources.
+
+To grant access to new users, Customer owner can send an invitation to the user email address. The invited user will receive an email with a link for accept the invitation, if they don't have an account, they will be able to create one. After the user accept the invitation, they will be able to access the account data and perform actions according to the permissions defined for the user.
+
+#### Associated by Platform Administrator
+
+The platform administrator can also associate users to accounts. The platform administrator can define the permissions of each user, allowing or restricting access to determined resources. Administrators can direct associate existing users to accounts or invite new users to the platform and associate them to the required account.
+
 :::info
 
 Please refer to the [Users](/docs/administration/users) section for more information about users.
@@ -105,31 +119,34 @@ Please refer to the [Users](/docs/administration/users) section for more informa
 
 The platform administrator can manage accounts through the administration API. The platform administrator can create, edit, and delete accounts. The platform administrator can also list accounts and view account details.
 
-### Accounts List
+:::tip
 
-Accounts list can be performed by the platform administrator with the right permissions. Only customer user owner will be allowed to list accounts.
+To see all API operations related to accounts, please refer to the [Account API section](https://api-reference.streamwise.online/private/#api-Account).
 
-Accounts list can be performed by _GET_ request to the `/accounts` endpoint. Please check the API reference for more information.
+:::
 
-### Create an Account
+### Account Creation {#create}
 
 Creating accounts can only be done by the platform administrator with the right permissions. Customers users will be allowed to create accounts if related subscription has feature `allow_create_account` enabled and the customer user has the right permissions.
 
 Create an account can be performed by _POST_ request to the `/accounts` endpoint. Please check the API reference for more information.
 
+### Accounts List
+
+Accounts list can be performed by the platform administrator with the right permissions. Only customer user owner will be allowed to list accounts.
+
+Accounts list can be performed by _GET_ request to the `/accounts` endpoint.
+
 ### Accounts Details
 
 Account details can be performed by the platform administrator with the right permissions. Customers users will be allowed to view account details that they have access to.
 
-Account details can be performed by GET request to the `/accounts/{account_id}` endpoint. Please check the API reference for more information.
+Account details can be performed by GET request to the `/accounts/{account_id}` endpoint. 
 
 ### Accounts Users
 
-Customer owner can invite users to the account. The invited user will receive an email with a link to create an account and set a password. The invited user will be able to access the account and perform actions according to the permissions defined for the user.
-
-System administrators with right permissions can add users to accounts. Different from customer owner, system administrators don't invite users to the account, but add existing users to the account. The invited user will be able to access the account and perform actions according to the permissions defined. If user do not exist, the system administrator will need to create the user first.
-
 Users account management can be performed by API request to the `/accounts/{account_id}/users` endpoint. Please check the API reference for more information.
+
 
 ### Editing an Account
 
@@ -139,15 +156,14 @@ Editing an account can be performed by PATCH request to the `/accounts/{account_
 
 ### Deleting an Account
 
-:::danger
-Deleting an account will delete all associated data, including users, rooms, recordings, etc. This action cannot be undone.
+:::caution Data loss prevention
+To prevent accidental deletion, only accounts with status `inactive` can be deleted.
 :::
 
 Deleting accounts can only be done by the platform administrator with the right permissions. Customers users will be allowed to delete accounts if related subscription has feature `allow_delete_account` enabled.
 
 Account deletion can be performed by DELETE request to the `/accounts/{account_id}` endpoint. Please check the API reference for more information.
 
-:::info
-To prevent accidental deletion, only accounts with status `inactive` can be deleted.
+:::danger
+Deleting an account will delete all associated data, including users, rooms, recordings, etc. This action cannot be undone.
 :::
-
