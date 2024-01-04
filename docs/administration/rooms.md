@@ -193,7 +193,7 @@ Example
 
 :::info
 
-To see the list of available features and how they can be used, see [Package Features](/docs/administration/service-packages/features) and [Subscription Features](/docs/administration/subscriptions/features).
+To see the list of available features and how they can be used, see [Package Features](/docs/administration/service-packages#features) and [Subscription Features](/docs/administration/subscriptions#features).
 
 :::
 

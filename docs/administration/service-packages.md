@@ -258,7 +258,7 @@ This property can be set in [Room](/docs/administration/rooms) object.
 Package Providers are the providers that are available to the customer when they subscribe to a service.
 
 :::info
-See [Package Providers](/docs/administration/service-packages/providers) for more information about providers.
+See [Package Providers](/docs/administration/service-packages#providers) for more information about providers.
 :::
 
 ## Packages Management
@@ -266,7 +266,7 @@ See [Package Providers](/docs/administration/service-packages/providers) for mor
 Service Packages management documentation is divided into different sections that describes in detail the components of a Service Package and how to manage them.
 
 - [Service Packages](/docs/administration/service-packages/): Describes the Service Packages and how to manage them.
-- [Service Providers](/docs/administration/service-packages/providers): Describes the Service Providers and how to manage them.
-- [Service Features](/docs/administration/service-packages/features): Describes the Service Features and how to manage them.
+- [Service Providers](/docs/administration/service-packages#providers): Describes the Service Providers and how to manage them.
+- [Service Features](/docs/administration/service-packages#features): Describes the Service Features and how to manage them.
 
 
