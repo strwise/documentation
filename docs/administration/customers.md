@@ -346,7 +346,7 @@ Customers can have multiple users associated with them. Each customer can have o
 
 Customer users can have different permissions associated with them. The permissions define what the user can with the customer and its resources and are define individually for each customer user, given the flexibility to define different permissions for different users.
 
-### Inviting Users
+### Inviting Users to a Customer {#invite}
 
 There is two ways to grant access to new users:
 
@@ -379,6 +379,12 @@ Customer limits and quotas are managed through [Subscriptions](/docs/administrat
 
 Administrators can manage accounts through the administration API. The platform administrator with the right permissions can create, edit, and delete customers. The platform administrator can also list customers and view account details.
 
+:::tip
+
+To see all API operations related to customer,  please refer to the [Customer API section](https://api-reference.streamwise.online/private/#api-Customer).
+
+:::
+
 ### Customer Creation
 
 Creating a new customer is the first step in using the platform. When you create a new customer, you can set their account and billing information, such as Email, Name, and Country. You can also set a customer’s preferred language, currency, and other important details that will be used throughout the platform.
@@ -410,12 +416,6 @@ Customer details can be performed by authenticated administrators with the right
 ### Customer Users
 
 Customer users can be managed by authenticated administrators with the right permissions through the [API](/docs/api) with the `GET /customers/{customer_id}/users` endpoint.
-
-:::note
-
-To see all API operations related to customer users, please refer to the [Customer API section](https://api-reference.streamwise.online/private/#api-Customer).
-
-:::
 
 ### Customer Editing
 
