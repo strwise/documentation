@@ -97,24 +97,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
-            items: [
-              {
-                label: 'Stack Overflow',
-                href: '#',
-              },
-              {
-                label: 'Discord',
-                href: '#',
-              },
-              {
-                label: 'Twitter',
-                href: '#',
-              },
-            ],
-          },
-          {
-            title: 'More',
+            title: 'API Reference',
             items: [
               {
                 label: 'API Reference (private)',
@@ -123,10 +106,6 @@ const config = {
               {
                 label: 'API Reference (public)',
                 href: 'https://api-reference.streamwise.online/public',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/mimirtechco',
               },
             ],
           },
