@@ -1,8 +1,8 @@
 ---
 title: Service Subscriptions
 description: Subscriptions are the subscriptions that are available to the customer when they subscribe to a service.
-sidebar_position: 0
-sidebar_label: Overview
+sidebar_position: 9
+sidebar_label: Subscriptions
 ---
 
 # Service Subscriptions
@@ -17,4 +17,10 @@ Through subscriptions, you can define the service name, description, and the ser
 
 ## Subscription Features {#features}
 
+> Subscription Features are the features that are available to the customer when they subscribe to a service.
 
+A subscription can have multiple features, each one representing a different resource that the customer sign up for. When create a new subscription, all features of the service package are automatically added to the subscription, with their limits and quotas.
+
+## subscription Service Providers {#providers}
+
+## Subscription Quotas {#quotas}
