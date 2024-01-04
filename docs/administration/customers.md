@@ -103,13 +103,17 @@ The `tenant_id` is used to identify the tenant of customer belongs to.
 
 > Not in use at moment.
 
-#### customer_key
-A special key for the customer.
+#### Customer Key
 
-#### customer_prefix
-A prefix related to the customer.
+The `customer_key` is a short unique string that can be used to identify the customer uniquely across all customers. This attribute can be useful for other uses due to its characteristics such as uniqueness and randomness, for example, as an encryption key or salt.
 
-#### status
+A use case is the subdomain generation. The platform uses the `customer_key` to generate a unique subdomain for the customer, like `https://customer-subdomain-<customer_key>.platform.streamwise.online`.
+
+#### Customer Prefix
+
+The `customer_prefix` is non-unique short string that can be used to personalize any customer related data, example: prefixing invoices numbers, quotes, etc.
+
+#### Status
 
 The status of the customer. Depending on the status value, some resources or operations can be restricted.
 
