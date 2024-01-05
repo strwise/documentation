@@ -1,6 +1,7 @@
 ---
 sidebar_position: 1
 sidebar_label: Overview
+slug: /deploy
 ---
 
 # Install & Setup Overview
