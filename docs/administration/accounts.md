@@ -69,7 +69,7 @@ This is an example of how to set the `account_metadata` attribute. The `acccount
 Account features are always set and enforced by subscription features. Accounts will share all available features in the subscription.
 
 :::note
-You can find more about Subscription Features at [Subscription Features](/docs/administration/subscriptions/features) section.
+You can find more about Subscription Features at [Subscription Features](/docs/administration/subscriptions#features) section.
 :::
 
 ## Account Limits and Quotas {#limits-quotas}
