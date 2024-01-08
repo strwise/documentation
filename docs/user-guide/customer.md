@@ -1,6 +1,6 @@
 ---
 sidebar_position: 2
-sidebar_label: Customer Management
+sidebar_label: Customer
 ---
 
 # Customer Management
