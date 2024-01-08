@@ -79,7 +79,7 @@ You can find more about Subscription Features at [Subscription Features](/docs/a
 Account limits and quotas are used to control the resource usage of the account by the customer, enforcing restrictions in determined resources like the number of rooms, participants, the duration of the room, the storage used, etc. You can use this limits as part of your billing strategy.
 
 :::note
-You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions/features) section.
+You can find more about Subscription Features Limits and Quotas in the [Subscription Features](/docs/administration/subscriptions#features) section.
 
 :::
 
