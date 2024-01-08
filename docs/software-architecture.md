@@ -6,3 +6,5 @@ sidebar_label: Software Architecture
 # Software Architecture
 
 > Work in progress
+
+https://12factor.net/

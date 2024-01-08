@@ -20,7 +20,10 @@ The API is organized in resources. Each resource has a set of operations that ca
 
 > To see more about API resources, see the [API Resources](/docs/api/resources) section.
 
-## Private API Reference
+
+## API Reference
+
+### Private API
 
 The private API reference to have all the API resources that are available on an administration level. This API reference is not intended to be used by the public (customers or users) and your access needs to be restricted.
 
@@ -28,7 +31,7 @@ All deployment will have a private API reference that can be accessed at `https:
 
 We keep an updated private API reference at https://video-stream-platform-api-reference.pages.dev/private/
 
-## Public API Reference
+### Public API
 
 The public API reference to have all the API resources that are available on a customer or user level. This API reference is intended to be used by the public (customers or users) and your access needs to be public.
 
