@@ -1,8 +1,8 @@
 ---
-title: Streaming Integration
-sidebar_label: Streaming
+title: Social Live Streaming Integration
+sidebar_label: Social Live Streaming
 ---
-# Streaming
+# Social Live Streaming
 
 ## Overview
 
