@@ -7,13 +7,25 @@ slug: resources
 
 # API Resources
 
-> work in progress
-
 The API is a RESTful API that uses JSON for serialization and OAuth 2.0 for authentication. In this section, you will find information about the API resources and how to use them.
 
 ## Sorting & Ordering
 
+### Order By {#order-by}
+
+The `orderBy` parameter is used to specify the field to be sorted. Its support virtually all fields of the resource.
+
+`?orderBy=` parameter can be applied to any `GET` HTTP request responsible for listing records (mainly for Paginated data).
+
+### Sorted By {#sorted-by}
+
+The `sortedBy` parameter is used to specify the order to be sorted.
+
+:::tip
+
 The `?sortedBy=` parameter is usually used with the `orderBy` parameter.
+
+:::
 
 By default, the `orderBy` sorts the data in **Ascending** order, if you want the data sorted in **Descending** order, you can add `&sortedBy=desc`.
 
@@ -25,12 +37,12 @@ By default, the `orderBy` sorts the data in **Ascending** order, if you want the
 Order by _created_at_ in _descending_ order.
 ```http
 
-GET /api/v1/recourse?orderBy=created_at&sortedBy=desc
+GET /api/v1/rooms?orderBy=created_at&sortedBy=desc
 ```
 
 Order by name in ascending order.
 ```http
-GET /api/v1/resource?orderBy=name
+GET /api/v1/rooms?orderBy=name
 ```
 
 :::tip
@@ -39,15 +51,13 @@ If you don't specify the `sortedBy` parameter, the data will be sorted in ascend
 
 ## Pagination
 
-`?page=` parameter can be applied to any `GET` HTTP request responsible for listing records (mainly for Paginated data).
-
 The `page` parameter is used to specify the page number to be returned.
 
-```http
+`?page=` parameter can be applied to any `GET` HTTP request responsible for listing records (mainly for Paginated data).
+
+```bash
 GET /api/v1/resource?page=7
 ```
-
-Pagination object is always returned in meta when pagination is available on the endpoint.
 
 ```json
 {
@@ -67,7 +77,15 @@ Pagination object is always returned in meta when pagination is available on the
 }
 ```
 
+:::info
+
+Pagination object is always returned in meta when pagination is available on the endpoint.
+
+:::
+
 ### Limit {#limit}
+
+The `limit` parameter is used to specify the number of records to be returned.
 
 `?limit=` parameter can be applied to any `GET` HTTP request responsible for listing records (mainly for Paginated data). The `limit` parameter is used to specify the number of records to be returned.
 
@@ -99,11 +117,11 @@ GET /api/v1/resource?limit=0
 
 ## Filtering
 
-`?filter=` parameter can be applied to any HTTP request and is used to control the response size, by defining what data you want back in the response.
-
 The `filter` parameter is used to specify the fields to be returned.
 
-```http
+`?filter=` parameter can be applied to any HTTP request and is used to control the response size, by defining what data you want back in the response.
+
+```bash
 GET /api/v1/resource?filter=id,name
 ```
 
@@ -125,7 +143,6 @@ The above request will return only the `id` and `name` fields.
 The filter parameter will be applied to any relationship that is included in the request. This means, that only the fields to be filtered will be present - all other fields are excluded. This also applies for all relationships (i.e., includes) of the object.
 
 :::
-
 
 ## Searching
 
@@ -231,3 +248,58 @@ GET /api/v1/resource?skipCache=true
 It's not recommended to keep skipping cache as it has bad impact on the performance.
 
 :::
+
+## Request Validation {#request-validation}
+
+StreamWise API uses different validation methods and techniques to ensure that the data sent to the API is valid and can be processed. All API endpoints will validate the request data and return a `422` status code if the data is invalid.
+
+#### Single field example
+
+```json
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "name": [
+            "The name field is required."
+        ]
+    }
+}
+```
+
+#### Multiple fields example
+
+```json
+{
+    "message": "The given data was invalid.",
+    "errors": {
+        "name": [
+            "The name field is required."
+        ],
+        "email": [
+            "The email field is required."
+        ]
+    }
+}
+```
+
+## API Versioning {#api-versioning}
+
+In creating robust and effective products and services that meet our users' ever-evolving needs, StreamWise believes that changes are inevitable. However, we deem it crucial to ensure that these changes do not adversely affect our users and the core functionality they are utilizing.
+
+This is where the versioning of our APIs comes into play.
+
+API versioning is an effective way for us to introduce changes to our API without disrupting existing functionalities for the current users. It allows us to make incremental updates or additions to our services without the risk of rendering obsolete the current systems relying on those APIs.
+
+As part of our commitment to industry best practices, StreamWise currently supports:
+
+* **URI Based Versioning**: We attach the version number directly in the API's URI. For example, https://api.streamwise.com/v1/users.
+
+This approach allows clients to clearly and reliably access the specific API version that they require. Furthermore, this also provides a clear and controlled path for adopting new updates and remaining supported if they are unable to upgrade immediately.
+
+Along with versioning our APIs, we are dedicated to maintaining a robust documentation for each API version so that users can effectively understand and utilize our services.
+
+The API is versioned using the `v1` prefix in the URL. The current version is `v1`.
+
+```http
+GET,POST,PATCH,DELETE /api/v1/resource
+```
