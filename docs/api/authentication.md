@@ -43,7 +43,7 @@ The first-party clients are not intended to be used by third-party applications.
 
 ### Password Grant Tokens
 
-The OAuth2 password grant allows first party clients, such as a mobile application, to obtain an access token using an email address / username and password.
+The OAuth2 password grant allows first-party clients, such as a mobile application, to obtain an access token using an email address / username and password.
 
 When Password Grant Tokens is used, the platform will authenticate the Client App first (ensuring the request is coming from your trusted first party client) and then needs to check if the user credentials are correct (ensuring the user is registered and has the right access), before issuing an access token.
 
@@ -108,7 +108,7 @@ The `client_id` and `client_secret` should not be exposed publicly (ex.: stored 
 
 > This grant is a great user experience for trusted first party clients both on the web and in native applications.
 
-The OAuth2 proxy allows first-party clients, such as a mobile application, to issue access tokens securely without requiring your users to go through the entire OAuth2 authorization code redirect flow.
+The OAuth2 proxy allows first-party clients, such as a mobile application or Web App, to issue access tokens securely without requiring your users to go through the entire OAuth2 authorization code redirect flow.
 
 StreamWise platform has two standard first-party proxy clients:
 
@@ -205,6 +205,24 @@ Third-party clients are applications that are not owned by you or by the platfor
 
 For third-party clients you need to use the **Client credentials grant** (A.K.A. Personal Access Tokens). _This grant type is the simplest and is suitable for machine-to-machine authentication._
 
+:::warning
+
+This feature is not available yet.
+
+:::
+
 ### Personal Access Tokens
 
 > work in progress
+
+:::warning
+
+This feature is not available yet.
+
+:::
+
+:::info
+
+Keep in mind there's no session state when using Tokens for Authentication
+
+:::
