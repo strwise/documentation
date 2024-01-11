@@ -330,9 +330,6 @@ This feature is not available yet.
 Third-party clients are applications that are not owned by you or by the platform. These clients are usually not trusted
 to securely make requests to the API without exposing sensitive information such as the client secret.
 
-For third-party clients you need to use the **Client credentials grant** (A.K.A. Personal Access Tokens). _This grant
-type is the simplest and is suitable for machine-to-machine authentication._
-
 ### Authorization Code Grant
 
 The authorization code grant should be very familiar if you’ve ever signed in to a web app using your Facebook or Google
