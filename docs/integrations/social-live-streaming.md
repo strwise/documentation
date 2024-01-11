@@ -1,6 +1,7 @@
 ---
 title: Social Live Streaming Integration
 sidebar_label: Social Live Streaming
+sidebar_position: 10
 ---
 # Social Live Streaming
 

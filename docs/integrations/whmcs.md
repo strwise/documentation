@@ -1,6 +1,7 @@
 ---
 title: WHMCS Integration
 sidebar_label: WHMCS
+sidebar_position: 20
 ---
 # WHMCS Integration
 
