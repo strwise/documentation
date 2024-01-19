@@ -8,7 +8,7 @@ sidebar_label: Rooms Management
 
 ## Overview
 
-The notion of a Room is central to SaaS Video Streaming Resell Platform. Intuitively, a Room represents a virtual space where end-users communicate. Technically, a Room is a computing resource that provides Real-time Communications (RTC) services to client applications through a set of APIs. A Room is a container for a set of Participants, and each Participant is a client application that connects to a Room.
+The notion of a Room is central to StreamWise VPaas Resell Platform. Intuitively, a Room represents a virtual space where end-users communicate. Technically, a Room is a computing resource that provides Real-time Communications (RTC) services to client applications through a set of APIs. A Room is a container for a set of Participants, and each Participant is a client application that connects to a Room.
 
 A Room is a resource that can be created, read, updated, and deleted. A Room is identified by a unique id, and each Room has a set of properties that can be configured.
 
@@ -215,16 +215,26 @@ A room's settings can be used to define parameters for the service provider. Eac
 
 Example of available configuration parameters for a **meet** room with a **BigBlueButton** service provider.
 
-| Setting Name             | Description                                                                      | Type    | Example                              |
-|--------------------------|----------------------------------------------------------------------------------|---------|--------------------------------------|
-| `moderator_only_message` | Message to be displayed when a participant tries to join the room as a moderator | string  | `Only moderators can join this room` |
-| `auto_start_recording`   | Automatically start recording when the meeting starts                            | boolean | `true`                               |
+| Setting Name             | Description                                                                      | Type    | Scope           | Example                              |
+|--------------------------|----------------------------------------------------------------------------------|---------|-----------------|--------------------------------------|
+| `moderator_only_message` | Message to be displayed when a participant tries to join the room as a moderator | string  | `room provider` | `Only moderators can join this room` |
+| `auto_start_recording`   | Automatically start recording when the meeting starts                            | boolean | `room provider` |  `true`                              |
 
 :::info
 
-Some room settings can be specific for a room type or service provider, please refer to the documentation of the [Room Type](#room-type) or [Service Providers](/docs/service-providers) for more information.
+Some room settings can be specific for a room type or service provider, please refer to the documentation of the [Room Type](#room-type) or [Service Providers](/docs/service-providers) for more detail about specific settings.
 
 :::
+
+#### Global Room Settings {#global-settings}
+
+The global room settings are settings that can be used in any room type or service provider. These settings are defined by the platform and can be used to configure the room. Below is a list of the current available global room settings.
+
+| Setting Name     | Description                    | Type   | Example                              |
+|------------------|--------------------------------|--------|--------------------------------------|
+| `description`    | The description of the room    | string | `This is a business meeting room`    |
+| `featured_image` | The featured image of the room | string | `https://example.com/featured-image` |
+| `hero_image`     | The hero image of the room     | string | `https://example.com/hero-image`     |
 
 ### Room Metadata {#metadata}
 
