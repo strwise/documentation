@@ -20,9 +20,22 @@ familiarizing yourself with the [general terminology](https://oauth2.thephpleagu
 OAuth2 before continuing.
 :::
 
+
+## Authentication
+
+Most API requests will require a form authentication. Access to resources will depend on the requestor's authorization level. All API requests must be made over HTTPS. Calls made over plain HTTP will fail. Most API requests without authentication will also fail.
+
+The authentication method is based on HTTP Bearers Tokens. The access token should be sent as a Bearer token in the `Authorization` header of the request.
+
+Example:
+
+```http
+Authorization: Bearer <access-token>
+```
+
 ## Client Secret and Client ID
 
-To authenticate requests to the API, you will need to create an OAuth2 client. The client will be assigned a `client_id`
+To be able to generate [Access Tokens](#access-tokens) to authenticate requests to the API, you will need to create an OAuth2 client. The client will be assigned a `client_id`
 and `client_secret` which will be used to authenticate requests to the API.
 
 During the installation of the platform, two default clients are created that are used in the proxy login process for
@@ -42,7 +55,7 @@ cache/session/storage). If you need to authenticate third-party applications, yo
 the [Third-Party Clients](#third-party-clients) grant.
 :::
 
-## Access Tokens
+## Access Tokens {#access-tokens}
 
 Access tokens are used to authenticate requests to the API. Access tokens are issued by the platform's OAuth2 server and
 are used to access the API. Access tokens are valid for a limited time and need to be refreshed periodically.
