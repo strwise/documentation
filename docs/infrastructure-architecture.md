@@ -14,7 +14,3 @@ The following diagram exemplifies the infrastructure architecture of the platfor
 ![Scalelite with BigBlueButton provider](/img/infrastructure-architecture/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3.jpg)
 
 > Download PDF version [here](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3.pdf)
-
-## Containers com provedor BigBlueButton
-
-A seguir um diagrama exemplificando a arquitetura de infraestrutura da plataforma em containers Docker utilizando como principal provedor de servicos o BigBlueButton, através de balanceamento de carga com Sclalelite e monitoramento com Prometheus e Grafana.
