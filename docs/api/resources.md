@@ -101,7 +101,7 @@ GET /api/v1/resource?limit=10&page=7
 
 :::info
 
-To change the default number of records per page, please refer to the [System Settings](/docs/administration/settings) section.
+To change the default number of records per page, please refer to the [System Settings](/docs/administration/system-settings) section.
 
 :::
 
