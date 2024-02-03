@@ -6,6 +6,8 @@ sidebar_label: Service Packages
 ---
 # Service Packages
 
+> work in progress
+
 > Service Package describe the specific goods or services you offer to your customers.
 
 A Service Package defines the service that a customer can subscribe and the resources that will be available. It can be a video streaming service, a web meeting service, or any other service that you want to offer to your customers.
@@ -21,7 +23,29 @@ You can create multiple Service Packages with different features and quotas that
 
 ## Package Properties
 
-The following table describes the available properties of a Service Package.
+### Package Types
+
+The platform supports the following package types:
+
+* **meet**: Web Meeting.
+* **live**: Live Streaming.
+* **video**: On Demand Video.
+* **webinar**: Webinar.
+* **webcast**: Webcast.
+* **simulcast**: Simulcast.
+* **phone**: Phone Conference.
+* **audio**: Audio Conference.
+* **audcast**: Audio Broadcast.
+
+### Grace Period {#grace-period}
+
+### Trial Period {#trial-period}
+
+### Periodicity {#periodicity}
+
+### Package Attributes
+
+The following table describes the available attributes of a Service Package.
 
 | Property                 | Type    | Description                                                                 |
 |--------------------------|---------|-----------------------------------------------------------------------------|
@@ -54,29 +78,27 @@ The following table describes the available properties of a Service Package.
 | package_settings         | array   | The package settings of the service package.                                |
 | package_metadata         | array   | The package metadata of the service package.                                |
 
-### Package Types
 
-The platform supports the following package types:
 
-* **meet**: Web Meeting.
-* **live**: Live Streaming.
-* **video**: On Demand Video.
-* **webinar**: Webinar.
-* **webcast**: Webcast.
-* **simulcast**: Simulcast.
-* **phone**: Phone Conference.
-* **audio**: Audio Conference.
-* **audcast**: Audio Broadcast.
+## Service Features
 
-## Package Features
+Service features are the matrix of resources available to set, consume and charge over. They serve as source of truth for the platform to manage the features that can be defined upon other resources like service packages, service providers, subscriptions, and others.
 
-A feature represents a resource that the customer can consume or access through a [Service Package](/docs/administration/service-packages). For example, a feature can represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer have to a web meeting. Packages can have multiple features, each one representing a different resource that the customer can consume or access.
+:::info
 
-### Feature Properties {#properties}
+Features are managed by the platform and can't be created or updated.
 
-Features are composed by properties that define the feature. The following table describes the available properties.
+:::
 
-| Property         | Type           | Description                                                                                                                         |
+The platform has a predefined set of features that can be used to specify the resources that will be available to the customer when they subscribe to a service package or for a service provider to specify what features are available, for example.
+
+Service Feature can have their use extended, such as enabling an external application to list the available resources, their identifiers and values and associate this information in its internal system for usage and billing control.
+
+### Service Feature Attributes {#service-feature-attributes}
+
+Service Features are composed by attributes that define the feature. The following table describes the available attributes.
+
+| Attribute        | Type           | Description                                                                                                                         |
 |------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------|
 | name             | string         | The name of the feature.                                                                                                            |
 | code             | string         | Unique code used to identify the feature associated with the API request. This code associates each event with the correct feature. |
@@ -136,124 +158,17 @@ The feature metadata.
 
 ### Available Features
 
-:::info
+Available service features can vary depending on platform version or license type. You can use the API resource `GET /features` to list all available features.
 
-Features are managed by the platform and can't be created or updated.
+## Package Features {#package-features}
 
-:::
+> work in progress
 
-The platform has a predefined set of features that can be used to define the features of a package. The following table describes the available features.
-
-
-| Code              | Name              | Aggregation Type | Consumable | Quota | Periodicity Type* | Periodicity* | Description                                              |
-|-------------------|-------------------|------------------|------------|-------|-------------------|--------------|----------------------------------------------------------|
-| max_accounts      |   Max Accounts    | count_agg        | true       | true  | monthly           | 0            | Maximum number of accounts that a customer can have.     |
-| max_rooms         |     Max Rooms     | count_agg        | true       | true  | monthly           | 0            | Maximum number of rooms that a customer can have.        |
-| max_participants  | Max Participants  | count_agg        | false      | true  | monthly           | 0            | Maximum number of participants that a customer can have. |
-| max_duration      |    Max Duration   | sum_agg          | false      | true  | monthly           | 0            | Maximum duration in minutes that a customer can use.     |
-| max_storage       | Max Storage       | sum_agg          | true       | true  | monthly           | 0            | Maximum storage in GB that a customer can use.           |
-| max_recordings    |   Max Recordings  | count_agg        | true       | true  | monthly           | 0            | Maximum number of recordings that a customer can have.   |
-| record_expiration | Record Expiration | sum_agg          | false      | true  | monthly           | 0            | Number of days that recordings will be kept.             |
-
-> * Default value.
-
-:::warning
-Some features can't be associated with a package depending on the package type and service provider.
-:::
-
-#### max_accounts
-
-The `max_accounts` setting is used to set the maximum number of accounts that can be created for the customer. This setting is used to limit the number of accounts that can be created for the customer.
-
-* **Key:** `max_accounts`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-#### max_rooms
-
-The `max_rooms` setting is used to set the maximum number of rooms that can be created for the customer. This setting is used to limit the number of rooms that can be created for the customer.
-
-* **Key:** `max_rooms`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-:::tip
-This property can be set in [Account](/docs/administration/accounts) object.
-:::
-
-#### max_participants
-
-The `max_participants` setting is used to set the maximum number of participants that a customer can have simultaneously watching or interacting in all there rooms at the same time. This setting is used to limit the number of participants that can be in all the rooms at the same time.
-
-* **Key:** `max_participants`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-:::tip
-This property can be set in [Account](/docs/administration/accounts) object.
-:::
-
-:::tip
-This property can be set in [Room](/docs/administration/rooms) object.
-:::
-
-#### max_duration
-
-The `max_duration` setting is used to set the maximum length in minutes that a customer can run a room. This setting is used to limit the length of time that a room can be active.
-
-* **Key:** `max_duration`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-:::tip
-This property can be set in [Account](/docs/administration/accounts) object.
-:::
-
-:::tip
-This property can be set in [Room](/docs/administration/rooms) object.
-:::
-
-#### max_storage
-
-The `max_storage` setting is used to set the maximum storage in GB that a customer can use. This setting is used to limit the amount of storage that can be used by the customer.
-
-* **Key:** `max_storage`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-#### max_recordings
-
-The `max_recordings` setting is used to set the maximum number of recordings that a customer can have. This setting is used to limit the number of recordings that can be created by the customer.
-
-* **Key:** `max_recordings`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-:::tip
-This property can be set in [Account](/docs/administration/accounts) object.
-:::
-
-:::tip
-This property can be set in [Room](/docs/administration/rooms) object.
-:::
-
-#### record_expiration
-
-The `record_expiration` setting is used to set the number of days that recordings will be kept. This setting is used to limit the number of days that a recording will be kept.
-
-* **Key:** `record_expiration`
-* **Type:** `integer`
-* **Value:** any positive integer or `true` to unlimited
-
-:::tip
-This property can be set in [Account](/docs/administration/accounts) object.
-:::
-
-:::tip
-This property can be set in [Room](/docs/administration/rooms) object.
-:::
+A feature represents a resource that the customer can consume or access through a Service Package. For example, a feature can represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer have to a web meeting. Packages can have multiple features, each one representing a different resource that the customer can consume or access.
 
 ## Package Providers
+
+> work in progress
 
 Package Providers are the providers that are available to the customer when they subscribe to a service.
 
@@ -263,10 +178,8 @@ See [Package Providers](/docs/administration/service-packages#providers) for mor
 
 ## Packages Management
 
-Service Packages management documentation is divided into different sections that describes in detail the components of a Service Package and how to manage them.
+> work in progress
 
-- [Service Packages](/docs/administration/service-packages/): Describes the Service Packages and how to manage them.
-- [Service Providers](/docs/administration/service-packages#providers): Describes the Service Providers and how to manage them.
-- [Service Features](/docs/administration/service-packages#features): Describes the Service Features and how to manage them.
+Service Packages management documentation is divided into different sections that describes in detail the components of a Service Package and how to manage them.
 
 
