@@ -13,4 +13,6 @@ The following diagram exemplifies the infrastructure architecture of the platfor
 
 ![Scalelite with BigBlueButton provider](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.jpg)
 
-> Download PDF version [here](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.pdf)
+> High resolution image [here](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.jpg)
+
+Download PDF version [here](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.pdf)
