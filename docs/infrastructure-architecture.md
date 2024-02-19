@@ -11,6 +11,6 @@ The architecture of the infrastructure will vary depending on the type of deploy
 
 The following diagram exemplifies the infrastructure architecture of the platform in Docker containers using Scalelite as the main service provider, through load balancing with Scalelite and monitoring with Prometheus, Grafana and Sentry.
 
-![Scalelite with BigBlueButton provider](/img/infrastructure-architecture/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.jpg)
+![Scalelite with BigBlueButton provider](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.jpg)
 
 > Download PDF version [here](/streamwise/streamwise-vpaas-infrastructure-diagram-scalelite-bbb_v3-20240219.pdf)
