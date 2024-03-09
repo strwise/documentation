@@ -6,6 +6,8 @@ sidebar_label: Service Providers
 
 # Service Providers
 
+> work in progress
+
 ## Overview
 
 Service Providers allows you to manage the third-party providers that will be made available to customers through Service Packages and Subscriptions. A Service Provider is a set of configuration options that define the properties and capabilities of the service provider.
@@ -90,7 +92,7 @@ The `active` is a boolean value that indicates whether the service provider is a
 
 :::caution
 
-If the service provider is set as the default provider for any subscription, you can't disable it. If you try to disable a service provider that is set as the default provider for any subscription, the platform will return an error.
+If the service provider is set as `default` in any [package](/docs/administration/service-packages) or [subscription](/docs/administration/subscriptions) provider, you can't disable it. Trying to disable a default service provider will return an error.
 
 :::
 
@@ -120,15 +122,15 @@ The `properties` is a key-value pairs that store additional structured data used
 
 The properties that will be set for a service provider will depend on the provider type. Each provider type has its own required properties.
 
-:::tip Sensitive Data
+:::info
 
-Any sensitive properties data, such as credentials, are **encrypted before being stored** in the database. The encryption is made using the most advanced encryption algorithms available and all stored data only can be decrypted by the platform.
+Please refer to the [**Provider Types**](#provider-types) section for more information about the required properties for each provider type.
 
 :::
 
-:::info
+:::tip Sensitive Data
 
-Please refer to the [Provider Types](#provider-types) section for more information about the required properties for each provider type.
+Any sensitive properties data, such as credentials, are **encrypted before being stored** in the database. The encryption is made using the most advanced encryption algorithms available and all stored data only can be decrypted by the platform.
 
 :::
 
