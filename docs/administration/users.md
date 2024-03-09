@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 sidebar_label: Users Management
 ---
 
@@ -17,9 +17,9 @@ In addition to user management, the platform offers robust [customer management 
 
 Overall, our user and account management features provide maximum flexibility and control over your services, while ensuring the highest levels of security and privacy for your customers. Whether you're managing a small business or a large enterprise, the Video Streaming Resell Platform offers the tools and features you need to succeed in the world of video streaming.
 
-## Users and Customers/Accounts
+## Users Associations
 
-The user management system includes tree different entities: customers, accounts and users.
+A user can be associated with multiple customers, accounts and rooms. Each association can have different permissions and access levels.
 
 * **Customers** are the top-level entities in the system. Customers can have multiple accounts. Customers own accounts and rooms. They represent a billable party, like a business or person and each customer can have multiple users associated with it.
 * **Accounts** are the second-level entities in the system. Accounts are associated with a single customer, and this customer has all privileges over the account. Accounts can have multiple users associated with them. Each account can have only one owner defined and as default the owner is user who was created with the account or first associated upon creation. Accounts represent a specific service, like a video streaming service or web meeting service. Each account can have multiple users associated with it.
@@ -33,11 +33,38 @@ Customer/Account owners have all the possible permissions that a user can posses
 
 ## User Properties {#properties}
 
-## User Attributes {#attributes}
+### User Attributes {#attributes}
 
 ### User Settings {#settings}
 
+The `user_settings` attribute is an array that can store various data related to the user. The following table describes the attributes of the `user_settings` array:
+
+:::note
+`user_settings` attribute **only recognize predefined keys**. Any other key will be ignored.
+:::
+
+:::info
+Some `user_settings` properties can be set by top-level properties of the [User](/docs/administration/users) object in API requests. Please refer to API reference guide for more information.
+:::
+
 ### User Metadata {#metadata}
+
+The `user_metadata` is a set of key-value pairs that can attached to a user. This can be useful for storing additional information or third-party data, such as a customer ID from a CRM system or billing system.
+
+The metadata is stored as a JSON object. The keys are strings and the values can be strings, numbers, booleans, or null.
+
+| Key                                    | Type   | Value  | Description            |
+|----------------------------------------|--------|--------|------------------------|
+| `user_metadata['external_billing_id']` | string | `123`  | Third-party billing id |
+| `user_metadata['external_crm_id']`     | string | `456`  | Third-party CRM id     |
+
+:::info
+Values are type hinted when possible. For example, if the value is `123`, the type will be `integer`. If the value is `true`, the type will be `boolean`. If the value is `null`, the type will be `null`.
+:::
+
+:::note
+This is an example of how to set the `user_metadata` attribute, this can be set to any key-value pair.
+:::
 
 ## User Management {#management}
 
