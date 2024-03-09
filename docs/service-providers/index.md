@@ -21,15 +21,15 @@ Thanks to the platform's multi-vendor architecture, it is possible to offer diff
 
 ### BigBlueButton
 
-BigBlueButton is an open source web conferencing system for online learning. The goal of the project is to provide remote students a high-quality online learning experience.
+[BigBlueButton](https://bigbluebutton.org/) is an open source web conferencing system for online learning. The goal of the project is to provide remote students a high-quality online learning experience.
 
-* website: https://bigbluebutton.org/
+* BigBlueButton Service Provider Documentation: [BigBlueButton Service Provider](/docs/service-providers/bigbluebutton)
 
 ### Scalelite
 
-Scalelite is a load balancer for BigBlueButton. It is a BigBlueButton plugin that allows you to scale your BigBlueButton infrastructure by adding more BigBlueButton servers.
+[Scalelite](https://github.com/blindsidenetworks/scalelite) is a load balancer for BigBlueButton. It is a BigBlueButton plugin that allows you to scale your BigBlueButton infrastructure by adding more BigBlueButton servers.
 
-* website: https://github.com/blindsidenetworks/scalelite
+* Scalelite Service Provider Documentation: [Scalelite Service Provider](/docs/service-providers/scalelite)
 
 ## Coming Soon
 
