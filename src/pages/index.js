@@ -1,39 +1,37 @@
-import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/overview">
-            Get Started
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
+    const {siteConfig} = useDocusaurusContext();
+    return (
+        <header className={clsx('hero hero--primary', styles.heroBanner)}>
+            <div className="container">
+                <h1 className="hero__title">{siteConfig.title}</h1>
+                <p className="hero__subtitle">{siteConfig.tagline}</p>
+                <div className={styles.buttons}>
+                    <Link
+                        className="button button--secondary button--lg"
+                        to="/docs/overview">
+                        Get Started
+                    </Link>
+                </div>
+            </div>
+        </header>
+    );
 }
 
 // component that return a section with a title and a description
 function Section () {
     return (
         <div className="container">
-        <h2 className="hero__subtitle" style={{marginTop: 7}}>StreamWise VPaaS Resell System</h2>
-        <p>
-            Welcome to <strong>Video Platform as a Service Resell System</strong>, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.
-        </p>
+            <h2 className="hero__subtitle" style={{marginTop: 7}}>StreamWise VPaaS Resell System</h2>
+            <p>
+                Welcome to <strong>Video Platform as a Service Resell System</strong>, a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.
+            </p>
             <p>
                 Our platform is designed to be intuitive and easy to use, with API-centric software that allows for flexibility and control over your services. With our platform, you can create and manage your own video streaming services, adjust settings, and add branding to make it look and feel like your own.
             </p>
@@ -58,17 +56,17 @@ function Section () {
 
 
 
-export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={siteConfig.title}
-      description={siteConfig.tagline}>
-      <HomepageHeader />
-      <main>
-        <Section />
-        {/*<HomepageFeatures />*/}
-      </main>
-    </Layout>
-  );
+export default function Home() {
+    const {siteConfig} = useDocusaurusContext();
+    return (
+        <Layout
+            title={siteConfig.title}
+            description={siteConfig.tagline}>
+            <HomepageHeader />
+            <main>
+                <Section />
+                {/*<HomepageFeatures />*/}
+            </main>
+        </Layout>
+    );
 }
