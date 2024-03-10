@@ -6,7 +6,19 @@ sidebar_label: Service Packages
 ---
 # Service Packages
 
-> work in progress
+## Overview
+
+Service Packages serve as the foundation of our platform, defining the specific goods or services that you offer to your valued customers. Each Service Package delineates the service available for subscription and the associated resources.
+
+A Service Package consists of the **Provider**, which denotes the service provided to the customer. This can encompass various offerings such as video streaming, web meeting services, or any other service tailored to your customers' needs. (Refer to [Service Providers](/docs/service-providers) for more information.)
+
+Additionally, Service Packages include a detailed breakdown of **Features**. These are the functionalities and capabilities available to subscribers upon service activation. Whether it's advanced video streaming options, comprehensive web meeting features, or other service-specific functionalities, Service Packages outline what customers can expect from their subscription.
+
+Furthermore, Service Packages incorporate **Quotas** that represent the limits or allowances associated with the service. Quotas ensure efficient resource allocation and management, allowing you to effectively control and monitor usage within predefined limits.
+
+With the flexibility of our platform, you have the capability to create multiple Service Packages, each offering distinct features and quotas. This enables you to cater to diverse customer needs and preferences effectively. For instance, you may choose to provide Standard and Premium packages, each offering unique features and quotas tailored to different customer segments.
+
+## Service Packages
 
 > Service Package describe the specific goods or services you offer to your customers.
 
