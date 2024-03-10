@@ -98,19 +98,19 @@ Service Feature can have their use extended, such as enabling an external applic
 
 Service Features are composed by attributes that define the feature. The following table describes the available attributes.
 
-| Attribute        | Type           | Description                                                                                                                         |
-|------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| name             | string         | The name of the feature.                                                                                                            |
-| code             | string         | Unique code used to identify the feature associated with the API request. This code associates each event with the correct feature. |
-| field_suffix     | string         | Property of the feature used for aggregating usage data. This field is not required for `count_agg`.                                |
-| aggregation_type | enum <string\> | The type of aggregation used for the feature. Possible values are `count_agg`, `sum_agg`, `max_agg` or `unique_count_agg`.          |
-| description      | string         | The description of the feature.                                                                                                     |
-| consumable       | boolean        | Indicates if the feature is consumable. If `true`, the feature will be consumed when the customer uses the resource.                |
-| quota            | boolean        | Indicates if the feature is a quota. If `true`, the feature will be used to limit the customer usage of the resource.               |
-| periodicity_type | enum <string\> | The type of periodicity for the feature. Possible values are `daily`, `weekly`, or `monthly`.                                       |
-| periodicity      | integer        | The periodicity value for the feature. Indicates how often the feature will be reset based on the periodicity type.                 |
-| feature_settings | object         | The feature settings.                                                                                                               |
-| feature_metadata | object         | The feature metadata.                                                                                                               |
+| Attribute        | Type            | Description                                                                                                                         |
+|------------------|-----------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| name             | string          | The name of the feature.                                                                                                            |
+| code             | string          | Unique code used to identify the feature associated with the API request. This code associates each event with the correct feature. |
+| field_suffix     | string          | Property of the feature used for aggregating usage data. This field is not required for `count_agg`.                                |
+| aggregation_type | enum \<string\> | The type of aggregation used for the feature. Possible values are `count_agg`, `sum_agg`, `max_agg` or `unique_count_agg`.          |
+| description      | string          | The description of the feature.                                                                                                     |
+| consumable       | boolean         | Indicates if the feature is consumable. If `true`, the feature will be consumed when the customer uses the resource.                |
+| quota            | boolean         | Indicates if the feature is a quota. If `true`, the feature will be used to limit the customer usage of the resource.               |
+| periodicity_type | enum \<string\> | The type of periodicity for the feature. Possible values are `daily`, `weekly`, or `monthly`.                                       |
+| periodicity      | integer         | The periodicity value for the feature. Indicates how often the feature will be reset based on the periodicity type.                 |
+| feature_settings | object          | The feature settings.                                                                                                               |
+| feature_metadata | object          | The feature metadata.                                                                                                               |
 
 #### Name
 

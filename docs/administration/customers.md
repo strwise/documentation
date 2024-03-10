@@ -82,8 +82,8 @@ For more information about how to set and use customers attributes, refer to the
 | delinquent                   | boolean          |              | false                                            |
 | allowed_domains_origins      | array of strings |              | ["origin1.com", "origin2.com"]                   |
 | allowed_domains_registration | array of strings |              | ["reg1.com", "reg2.com"]                         |
-| customer_settings            | object           |              | { "setting1": "value1", "setting2": "value2" }   |
-| customer_metadata            | object           |              | { "metadata1": "value1", "metadata2": "value2" } |
+| customer_settings            | object           |              | \{ "setting1": "value1", "setting2": "value2" }  |
+| customer_metadata            | object           |              | \{ "metadata1": "value1", "metadata2": "value2" } |
 
 #### uuid
 
