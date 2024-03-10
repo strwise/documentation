@@ -7,9 +7,11 @@ sidebar_label: Subscriptions
 
 ## Overview {#overview}
 
-Subscriptions are the business model that defines the service that the customer will have access to. Subscriptions are associated with a service package and are the subscriptions that are available to the customer when they subscribe to a service.
+Service Subscriptions represent the fundamental business model that dictates the specific service to which a customer gains access. These subscriptions are intricately linked with a service package, delineating the range of offerings available to customers upon subscription.
 
-Through subscriptions, you can define the service name, description, and the service provider that will be used to provide the service. You can also define the subscription features and quotas that will be available when a customer subscribe to the service.
+Within Service Subscriptions, you have the ability to customize various aspects of the service, including the service name, description, and the designated service provider responsible for service delivery. Additionally, you can specify the subscription features and quotas that become available to customers upon subscribing to the service.
+
+By leveraging Service Subscriptions, you can tailor the customer experience to meet their unique needs and preferences. Whether it's defining the service details or outlining subscription features and quotas, Service Subscriptions provide the flexibility needed to create personalized offerings for your customer base.
 
 ## Subscription Properties {#properties}
 
