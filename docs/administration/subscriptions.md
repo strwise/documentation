@@ -15,7 +15,7 @@ By leveraging Service Subscriptions, you can tailor the customer experience to m
 
 ## Subscription Properties {#properties}
 
-Subscriptions have a set of properties that define the service that the customer will have access to. Below are the properties that can be defined for a subscription.
+Subscription Properties play a crucial role in defining the service that customers will have access to. These properties encompass various aspects of the subscription, shaping the customer's experience and determining the features and resources available to them. Below, we outline the key properties that can be defined for a subscription.
 
 ### Subscription Attributes {#attributes}
 
@@ -126,7 +126,7 @@ The subscription cancellation date is the date when the subscription was cancele
 
 The subscription trial period is the number of cycles of an interval that the customer can use the service for free.
 
-::: note
+:::note
 
 To learn more about the trial period, see [Service Package Trial Period](/docs/administration/service-packages#trial-period).
 
@@ -206,13 +206,13 @@ Subscription Metadata is not available yet.
 
 ## Subscription Features {#features}
 
-> Subscription Features are the features that are available to the customer when they subscribe to a service.
+Subscription Features encompass the various functionalities available to customers upon subscribing to a service.
 
-A subscription can have multiple features, each one representing a different resource that the customer sign up for. When create a new subscription, all features present on related [Service Package](/docs/administration/service-packages) are automatically added to the subscription, with their limits and quotas.
+Each subscription may include multiple features, representing different resources to which the customer gains access. Upon creating a new subscription, all features associated with the related [Service Package](/docs/administration/service-packages) are automatically included, complete with their respective limits and quotas.
 
-Besides the features that are automatically added to the subscription, you can add more features to the subscription. This can be useful when you need a customer to have access to a specific feature that is not available on the service package.
+In addition to the automatically included features, it's possible to manually add more features to a subscription. This functionality proves valuable when specific features not initially included in the service package are required.
 
-With Subscription Features you can have a flexible way to manage the features that are available to the customer when they subscribe to a service.
+Subscription Features offer a flexible means of managing the features available to customers upon subscription to a service, ensuring tailored offerings to meet their needs.
 
 :::note
 
@@ -224,25 +224,31 @@ Please refer to Subscription [Features Management](#features-management) for mor
 
 ## Subscription Service Providers {#providers}
 
-Subscriptions can have Service Providers, that are the providers that the customer can use to provide the service for the given subscription. When create a new subscription, a default provider is automatically associated based on the default provider of the service package, but it is possible include additional service providers.
+Subscriptions can be associated with Service Providers, which represent the providers available to customers for delivering the service associated with the subscription.
 
-It is possible to have multiple service providers associated with a subscription, each one representing a different provider that the customer can use to provide the service for the given subscription, but **only one provider can be the default** provider. With this, administrators can customize any subscription to use a specific provider, or even change the default provider at any time.
+When creating a new subscription, a default provider is automatically assigned based on the default provider of the service package. However, administrators have the option to include additional service providers.
 
-For example, suppose that your customer is having bad performance with the actual provider associated with his subscription, due to a high usage. You can add a new provider to the subscription and set it as default, now the customer have a new provider to use. This can be even temporally, removing the provider after the customer usage decrease and return to the original provider.
+While it's possible to have multiple service providers associated with a subscription, **only one provider can serve as the default**. This allows administrators to customize subscriptions to use specific providers or change the default provider as needed.
 
-When a service provider is associated with a subscription, data such as provider access credentials, settings, and metadata are not copied, allowing you to update provider credentials, for example, without having to perform the same operation on all subscriptions that use the provider.
+For example, if a customer experiences poor performance with their current provider due to high usage, administrators can add a new provider to the subscription and set it as the default. This can be a temporary solution until the customer's usage decreases, and they return to the original provider.
 
-With Subscription Service Providers you can have a flexible way to manage the service providers that the customer can use to provide the service for the given subscription.
+When a service provider is associated with a subscription, data such as provider access credentials, settings, and metadata are not duplicated. This allows for easy updating of provider credentials without impacting all subscriptions that use the provider.
 
-Please refer to Subscription [Service Providers Management](#providers-management) for more information.
+Subscription Service Providers offer a flexible way to manage the providers available to customers for delivering the service associated with their subscription.
+
+:::note
+
+For more information on managing Subscription Service Providers, please refer to the Subscription [Service Providers Management](#providers-management) section.
+
+:::
 
 ## Subscription Limits and Quotas {#limits-quotas}
 
-Subscriptions has limits and quotas that define the maximum usage of the resources available in a subscription. The limits and quotas are defined by the features that are available in the subscription, each feature has a limit and a quota that can be used by the customer.
+Subscriptions are governed by limits and quotas that determine the maximum utilization of resources available within the subscription. These limits and quotas are established based on the features included in the subscription, with each feature having its own defined limit and quota for customer usage.
 
-These limits are primarily based on Service Package Features, but can be customized for each subscription. For example, you can have a service package that has a feature called `max_rooms` with a limit of 10 rooms, but you can create a subscription that has a feature called `max_rooms` with a limit of 20 rooms.
+While these limits are primarily derived from Service Package Features, they can be customized on a per-subscription basis. For instance, while a service package may include a feature named `max_rooms` with a limit of 10 rooms, a specific subscription can be configured to have a `max_rooms` feature with a limit of 20 rooms.
 
-To see how tor manage limits and quotas for a subscription, please refer to the [Subscription Features](#features-management) and take a look at [Service Package Features](/docs/administration/service-packages/) for more information.
+For guidance on managing limits and quotas for a subscription, please refer to the [Subscription Features](#features-management) section. Additionally, consult the [Service Package Features](/docs/administration/service-packages/) documentation for comprehensive information on feature configuration and management.
 
 ## Subscription Management {#management}
 
