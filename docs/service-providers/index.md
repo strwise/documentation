@@ -8,14 +8,11 @@ sidebar_label: Overview
 
 ## Overview
 
+The Service Provider feature is an integral component of our platform, enabling the management of diverse providers to meet the varied needs of our users. Each service provider boasts its own unique properties, settings, and metadata, offering unparalleled customization options. These providers can seamlessly integrate with different service packages and subscriptions, providing flexibility and scalability.
 
-The Service Provider is a crucial part of the platform. It allows the management of different service providers that can be used within the platform. Each service provider has its own properties, settings, and metadata. The service providers can be associated with different service packages and subscriptions.
+Our platform supports multiple service providers from various vendors, with each provider fully configurable to meet specific requirements. This versatility allows for the provision of different services to different customers, catering to individual preferences and needs. For instance, you can offer a BigBlueButton service to one customer and a Jitsi service to another, all within the same platform environment.
 
-The platform supports multiple service providers from multiple vendors, and each service provider can be configured with different settings.
-
-With Service Provider feature, it is possible provide different services to different customers. For example, you can provide a BigBlueButton service to one customer and a Jitsi service to another customer.
-
-Thanks to the platform's multi-vendor architecture, it is possible to offer different Service Packages to meet the most varied needs of web meeting and video streaming solutions. The following is an overview of the service providers that can be used on the platform.
+Thanks to our platform's multi-vendor architecture, we can offer a diverse range of Service Packages to address the wide spectrum of web meeting and video streaming solutions. Below, you'll find an overview of the service providers available for use on our platform.
 
 ## Available Service Providers
 

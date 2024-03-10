@@ -10,9 +10,17 @@ sidebar_label: Service Providers
 
 ## Overview
 
-Service Providers allows you to manage the third-party providers that will be made available to customers through Service Packages and Subscriptions. A Service Provider is a set of configuration options that define the properties and capabilities of the service provider.
+The Service Providers feature empowers you to effectively manage third-party providers within the StreamWise platform, offering a diverse array of services through Service Packages and Subscriptions. Each Service Provider is equipped with a customizable set of configuration options, defining unique properties and capabilities tailored to your needs.
 
-The StreamWise platform allows you to configure different service providers, allowing you to support the provision of multiple types of video, streaming and web meeting services with vendor independence.
+Service Providers play a pivotal role in the platform, facilitating the management of diverse providers to cater to the varied needs of your clientele. Each provider comes with its own distinct properties, settings, and metadata. These providers can seamlessly integrate with different service packages and subscriptions, enhancing flexibility and customization.
+
+With StreamWise, you have the flexibility to configure multiple service providers, enabling you to deliver a wide range of video, streaming, and web meeting services while maintaining vendor independence. This capability empowers you to meet the diverse needs of your customers efficiently and effectively.
+
+:::tip
+
+For a extensive list of available providers,  please refer to the [Service Providers](/docs/service-providers/) section.
+
+:::
 
 ## Service Types {#service-types}
 
