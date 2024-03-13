@@ -146,6 +146,12 @@ Any sensitive properties data, such as credentials, are **encrypted before being
 
 The `settings` is a key-value pairs that store additional structured data used internally to configure additional information attached to a service provider. The settings are used to define the behavior of the service provider.
 
+:::note
+
+At moment, no settings are available for a service provider.
+
+:::
+
 ### Metadata
 
 The `metadata` is a set of key-value pairs that can attached to a service provider. This can be useful for storing additional information or third-party data, such as identification from a CRM system or billing system.
