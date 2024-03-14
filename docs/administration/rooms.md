@@ -176,10 +176,13 @@ The `room_features` is a key-value collection composed of various features avail
 
 When a room has custom resource values, the custom resource value is used instead of the resource value defined in the subscription. For example, if the subscription defines that the room can have a maximum of 100 participants, but the room has a custom resource that defines that the room can have a maximum of 50 participants, the custom resource value will be used.
 
+:::info
 
 If a feature is configured in the room but is not available in the subscription, or has a higher or different value than the subscription, the feature will be ignored.
 
-If a room does not have a feature configured, the value of the feature defined in the subscription will be used.
+:::
+
+If a room does not have a customized feature configured, the value will be inherited from the subscription.
 
 **Example**
 
