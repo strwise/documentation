@@ -26,9 +26,9 @@ The BigBlueButton Service Provider requires a BigBlueButton server installed and
 - The BigBlueButton server must have the BigBlueButton **API enabled and accessible**.
 - The BigBlueButton server must have **webhooks configured**.
 
-## Service Provider: BigBlueButton       
+## Providers: BigBlueButton  {#providers}     
 
-### Properties
+### Properties {#provider-properties}
 
 The `properties` attribute of the Service Provider stores various data related to the Service Provider. Here are the properties specific to a **BigBlueButton** Service Provider:
 
@@ -114,6 +114,60 @@ For `metadata` attribute please refer to [Service Providers Administration](/doc
 
 :::
 
-## Provider Management
+### Provider Management
 
-> work in progress
+Assim como outros provedores, a administracao do BigBlueButoon se dá através do recurso de provedores de servico. Através deste recurso, é possível criar, editar e excluir provedores de serviço BigBlueButton. Acesse [Provedores de Serviço](/docs/administration/service-providers) para mais informações sobre a administracao de provedores de servico.
+
+## Packages: BigBlueButton {#packages}
+
+Pacotes de servico do tipo `meet` podem ser associados a provedores de servico BigBlueButton. Estes pacotes de servico irao determinar o comportamento do servico ao utilizar o provedor BigBlueButton através dos recursos de pacotes de servico.
+
+Os recursos disponiveis no pacote de servico serao associados aos recursos disponibilizados pelo servidor do BigBlueButton.
+
+Considerando um pacote do tipo `meet`, que possui um provedor BigBluButton como o padrao para prover servicos de web conferencia para os seus assinantes e que possui entre seus recursos definidos o recurso `public_chat`, quando um assinante criar uma nova sala, o respectivo recurso estará habilitado na sala do BigBlueButton.
+
+Outro exemplo seria um pacote que possui o recurso `recording` habilitado. Neste caso a sala do BigBlueButton poderá ter suas sessões gravadas.
+
+## Subscriptions: BigBlueButton {#subscriptions}
+
+Assim como os pacotes, as assinaturas podem possuir recursos especificos que nao definidos no seu pacote de referencia. A lógica por detrás dos recursos de assinatura é a mesma dos recursos de pacote, ou seja, os recursos disponiveis na assinatura serao associados aos recursos disponibilizados pelo servidor do BigBlueButton.
+
+## Rooms: BigBlueButton {#rooms}
+
+Salas que utilizam o provedor BigBlueButton podem receber uma série de configurações e recursos específicas. Estas configuracoes e recursos irao determinar o comportamento da sala ao utilizar o provedor BigBlueButton.
+
+### Settings
+
+Como descrito em Room Settings, dependendo do provedor de servico, a sala pode possuir configuracoes especificas. Estas configuracoes irao determinar o comportamento da sala ao utilizar o provedor BigBlueButton.
+
+A tabela a seguir mostra os recursos que poderao ser utilizados no provedor e o respectivo parametro associado no BigBlueButton.
+
+|          Room Setting           |      BigBlueButton Parameter       |    Default     |                                                                              Description                                                                              |
+|:-------------------------------:|:----------------------------------:|:--------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|  `allow_start_stop_recording`   |     `allowStartStopRecording`      |      true      |                                                           Allow the moderator to start and stop recording.                                                            |
+|     `auto_start_recording`      |        `autoStartRecording`        |     false      |                                                        Automatically start recording when the meeting starts.                                                         |
+|  `webcams_only_for_moderator`   |     `webcamsOnlyForModerator`      |     false      |                                        Cause all webcams shared by viewers during this meeting to only appear for moderators.                                         |
+|          `banner_text`          |            `bannerText`            |                |                                                             The text to be displayed in the banner area.                                                              |
+|         `banner_color`          |           `bannerColor`            |                |                                                              The color of the banner area in hex format.                                                              |
+|         `mute_on_start`         |           `muteOnStart`            |     false      |                                                              Mute all users when they join the meeting.                                                               |
+|  `allow_mods_to_unmute_users`   |      `allowModsToUnmuteUsers`      |     false      |                                                                Allow moderators to unmute other users.                                                                |
+|  `allow_mods_to_eject_cameras`  |     `allowModsToEjectCameras`      |     false      |                                                     Allow moderators to close other users cameras in the meeting.                                                     |
+|          `disable_cam`          |      `lockSettingsDisableCam`      |     false      |                                                        Prevent users from sharing their camera in the meeting.                                                        |
+|          `disable_mic`          |      `lockSettingsDisableMic`      |     false      |                                                      Prevent users from sharing their microphone in the meeting.                                                      |
+|     `disable_private_chat`      |  `lockSettingsDisablePrivateChat`  |     false      |                                                       Prevent users from using the private chat in the meeting.                                                       |
+|      `disable_public_chat`      |  `lockSettingsDisablePublicChat`   |     false      |                                                       Prevent users from using the public chat in the meeting.                                                        |
+|         `disable_notes`         |     `lockSettingsDisableNotes`     |     false      |                                                          Prevent users from using the notes in the meeting.                                                           |
+|        `welcome_message`        |             `welcome`              |                |                                                     The message to be displayed when the user joins the meeting.                                                      |
+|    `moderator_only_message`     |       `moderatorOnlyMessage`       |                |                                               The message to be displayed when a non-moderator user joins the meeting.                                                |
+|       `camera_as_content`       |         `cameraAsContent`          |     false      |                                                                 Enables/Disables camera as a content.                                                                 |
+|        `external_videos`        |          `externalVideos`          |     false      |                                                         Enables/Disables share an external video in the room.                                                         |
+|      `hide_viewers_cursor`      |  `lockSettingsHideViewersCursor`   |     false      |                                                                 Hide the viewers cursor in the room.                                                                  |
+|        `hide_user_list`         |     `lockSettingsHideUserList`     |     false      |                                                                    Hide the user list in the room.                                                                    |
+|     `end_when_no_moderator`     |        `endWhenNoModerator`        |     false      |                                                       End the meeting when no moderators join after a timeout.                                                        |
+| `end_when_no_moderator_timeout` | `endWhenNoModeratorDelayInMinutes` |       1        |                               The timeout in minutes to end the meeting when no moderators join. (default value based on BBB defaults)                                |
+|        `meeting_layout`         |          `meetingLayout`           | `SMART_LAYOUT` | Will set the default layout for the meeting. Possible values are: CUSTOM_LAYOUT, SMART_LAYOUT, PRESENTATION_FOCUS, VIDEO_FOCUS. (default value based on BBB defaults) |
+| `notify_recording_is_on`        | `notifyRecordingIsOn`              |     false      |                                                              Notify the users when the recording is on.                                                               |
+| `user_camera_cap` | `userCameraCap` |       3        |                            Defines the max number of webcams a single user can share simultaneously. (default value based on BBB defaults)                            |
+| `meeting_camera_cap` | `meetingCameraCap` |       0        |                                Defines the max number of webcams a meeting can have simultaneously, `0` will disable this threshold. (default value based on BBB defaults)                                 |
+| `presentation_url` | `presentationUrl` |                |                                The URL of the presentation to be displayed when the meeting starts. (default value based on BBB defaults)                                 |
+| `presentation_description` | `presentationDescription` |                |                                The description of the presentation to be displayed when the meeting starts. (default value based on BBB defaults)                                 |
