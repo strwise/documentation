@@ -128,7 +128,7 @@ Please refer to the [Service Types](#service-types) section for more information
 
 The `properties` is a key-value pairs that store additional structured data used internally to configure additional information attached to a service provider. The properties are used to store the configuration of the service provider like credentials, hostnames, etc.
 
-The properties that will be set for a service provider will depend on the provider type. Each provider type has its own required properties.
+The properties that will be set for a service provider will depend on the provider type. Each provider has its own required properties.
 
 :::info
 
