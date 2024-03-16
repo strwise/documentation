@@ -1,0 +1,4 @@
+# add header host for cloudflare pages for do not track any file under assets
+/assets/js/*
+    X-Content-Type-Options: nosniff
+    X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
