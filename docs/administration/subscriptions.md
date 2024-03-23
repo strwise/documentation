@@ -595,6 +595,12 @@ The service provider type needs to be the same of the subscription. For example,
 
 :::
 
+:::danger
+
+Subscriptions without a service provider cannot be used by the customer. If you need to use a subscription, you need to add at least one service provider to it.
+
+:::
+
 #### Add Service Provider to a Subscription {#add-provider}
 
 To add a service package to a subscription, you need first attach the desired provider to the respective service package.
