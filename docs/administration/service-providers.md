@@ -16,11 +16,35 @@ Service Providers play a pivotal role in the platform, facilitating the manageme
 
 With StreamWise, you have the flexibility to configure multiple service providers, enabling you to deliver a wide range of video, streaming, and web meeting services while maintaining vendor independence. This capability empowers you to meet the diverse needs of your customers efficiently and effectively.
 
-:::tip
+:::info
 
 For a extensive list of available providers,  please refer to the [Service Providers](/docs/service-providers/) section.
 
 :::
+
+## Hierarchical Structure
+
+In the StreamWise platform, the hierarchical structure of service providers is a fundamental concept that underpins the organization and functionality of the system. This structure is primarily based on the relationships between service providers, packages, and subscriptions.
+
+At the core of this hierarchy are the service providers. These entities offer a diverse array of services and are equipped with a customizable set of configuration options, defining unique properties and capabilities tailored to your needs. Each service provider can seamlessly integrate with different service packages and subscriptions, enhancing flexibility and customization.
+
+Service packages and subscriptions form the next level of the hierarchy. They are dependent on service providers and require at least one service provider to function properly. These packages and subscriptions encapsulate the services offered by the providers and present them to the end-users in a structured and manageable way.
+
+```mermaid
+graph TB
+    SP[Service Providers]
+    P[Packages]
+    S[Subscriptions]
+    SP -->|Can be attached to| P
+    P -->|Need at least one Service Provider| S
+    S -->|Can only have Package Providers attached| P
+    S -->|Inherits properties from Service Providers| SP
+```
+
+Subscriptions represent the final level of the hierarchy. They can only have package providers attached, further emphasizing the hierarchical relationship between service providers, packages, and subscriptions.
+
+Understanding this hierarchical structure is crucial for managing and configuring the StreamWise platform effectively. It allows for a clear overview of how services are organized and how they interact with each other, providing a solid foundation for efficient service delivery and management.
+
 
 ## Service Types {#service-types}
 
