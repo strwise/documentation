@@ -22,7 +22,7 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'mimirtech', // Usually your GitHub org/user name.
+  organizationName: 'mimirtechco', // Usually your GitHub org/user name.
   projectName: 'video-stream-platform/documentation', // Usually your repo name.
 
   onBrokenLinks: 'throw',
@@ -35,6 +35,11 @@ const config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  markdown: {
+    mermaid: true,
+  },
+  themes: ['@docusaurus/theme-mermaid'],
 
   presets: [
     [
@@ -73,16 +78,16 @@ const config = {
             position: 'left',
             label: 'Docs',
           },
-          {
-            href: 'https://api-reference.streamwise.online/private/',
-            position: 'right',
-            label: 'API Reference (private)',
-          },
-          {
-            href: 'https://api-reference.streamwise.online/public/',
-            position: 'right',
-            label: 'API Reference (public)',
-          },
+          // {
+          //   href: 'https://api-reference.streamwise.online/private/',
+          //   position: 'right',
+          //   label: 'API Reference (private)',
+          // },
+          // {
+          //   href: 'https://api-reference.streamwise.online/public/',
+          //   position: 'right',
+          //   label: 'API Reference (public)',
+          // },
         ],
       },
       footer: {
@@ -119,7 +124,7 @@ const config = {
         additionalLanguages: ['json', 'bash', 'diff', 'php', 'http'],
       },
       // add meta tag with Page Author
-      metadata: [{ name: 'author', content: 'Mimir Tech do Brasil' }],
+      metadata: [{ name: 'author', content: 'Mimir Tech' }],
     }),
 };
 
