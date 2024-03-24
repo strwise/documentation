@@ -13,6 +13,20 @@ StreamWise platform allows you to create admins users to manage the system. Thes
 
 Administrators have a set of permissions that determine what they can do within the system. Permissions are grouped into **roles**, and admins can have one or more roles associated with them.
 
+```mermaid
+graph TB
+    A[Administrators]
+    P[Permissions]
+    R[Roles]
+    S[Settings]
+    M[Metadata]
+    A -->|Have| P
+    A -->|Have| R
+    A -->|Have| S
+    A -->|Have| M
+    R -->|Assigned| P
+```
+
 Admin users have their structure and administration independent of the structure of users who use the platform, as well as their authentication process.
 
 :::note
@@ -24,7 +38,6 @@ Refer to [API Authentication](/docs/api/authentication) for more information abo
 ## Admin Properties
 
 Administrators have a set of properties that define them. This properties are used to identify the administrator and to define how the administrator interacts with the platform.
-
 
 ### Admin Attributes
 
