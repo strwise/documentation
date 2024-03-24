@@ -16,6 +16,17 @@ Additionally, Service Packages include a detailed breakdown of **Features**. The
 
 Furthermore, Service Packages incorporate **Quotas** that represent the limits or allowances associated with the service. Quotas ensure efficient resource allocation and management, allowing you to effectively control and monitor usage within predefined limits.
 
+```mermaid
+graph TB
+    SP[Service Packages]
+    P[Provider]
+    F[Features]
+    Q[Quotas]
+    SP -->|Consists of| P
+    SP -->|Includes| F
+    SP -->|Incorporates| Q
+```
+
 With the flexibility of our platform, you have the capability to create multiple Service Packages, each offering distinct features and quotas. This enables you to cater to diverse customer needs and preferences effectively. For instance, you may choose to provide Standard and Premium packages, each offering unique features and quotas tailored to different customer segments.
 
 ## Service Packages
