@@ -16,6 +16,16 @@ Additionally, Service Packages include a detailed breakdown of **Features**. The
 
 Furthermore, Service Packages incorporate **Quotas** that represent the limits or allowances associated with the service. Quotas ensure efficient resource allocation and management, allowing you to effectively control and monitor usage within predefined limits.
 
+
+
+With the flexibility of our platform, you have the capability to create multiple Service Packages, each offering distinct features and quotas. This enables you to cater to diverse customer needs and preferences effectively. For instance, you may choose to provide Standard and Premium packages, each offering unique features and quotas tailored to different customer segments.
+
+## Service Packages
+
+> Service Package describe the specific goods or services you offer to your customers.
+
+A Service Package defines the service that a customer can subscribe and the resources that will be available. It can be a video streaming service, a web meeting service, or any other service that you want to offer to your customers.
+
 ```mermaid
 graph TB
     SP[Service Packages]
@@ -26,14 +36,6 @@ graph TB
     SP -->|Includes| F
     SP -->|Incorporates| Q
 ```
-
-With the flexibility of our platform, you have the capability to create multiple Service Packages, each offering distinct features and quotas. This enables you to cater to diverse customer needs and preferences effectively. For instance, you may choose to provide Standard and Premium packages, each offering unique features and quotas tailored to different customer segments.
-
-## Service Packages
-
-> Service Package describe the specific goods or services you offer to your customers.
-
-A Service Package defines the service that a customer can subscribe and the resources that will be available. It can be a video streaming service, a web meeting service, or any other service that you want to offer to your customers.
 
 Service Packages are composed of:
 
