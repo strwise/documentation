@@ -128,10 +128,17 @@ Considering a `meet` package, which has a BigBluButton provider as the default t
 
 Another example would be a package that has the `recording` feature enabled. In this case, the BigBlueButton room can have its sessions recorded.
 
+### Features {#package-features}
+
 The following table shows the features that are recognized by the provider and their associated parameter in BigBlueButton.
 
-| Service Feature | BigBlueButton Parameter | Description |
-|:---------------:|:------------------------:|:------------|
+|  Service Feature   | BigBlueButton Parameter | Description                                        |
+|:------------------:|:-----------------------:|:---------------------------------------------------|
+|   `max_duration`   |      `maxDuration`      | The maximum duration of the meeting in minutes.    |
+| `max_participants` |    `maxParticipants`    | The maximum number of participants in the meeting. |
+|    `recording`     |       `recording`       | Enable/Disable recording of the meeting.           |
+|   `private_chat`   |      `privateChat`      | Enable/Disable private chat in the meeting.        |
+|   `public_chat`    |      `publicChat`       | Enable/Disable public chat in the meeting.         |
 
 ## Subscriptions: BigBlueButton {#subscriptions}
 
@@ -141,9 +148,15 @@ Like packages, subscriptions can have specific features that are not defined in 
 
 Rooms that use the BigBlueButton provider can be assigned a number of specific settings and features. These settings and features will determine the behavior of the room when using the BigBlueButton provider.
 
+### Features {#room-features}
+
+As described in [Room Features](/docs/administration/rooms#features), depending on the service provider, the room may have specific features. These features will determine the behavior of the room when using the BigBlueButton provider.
+
+The available features for a room feature level customization is in sync with the package features so refer to the [Packages: BigBlueButton](#packages) section for the available features.
+
 ### Settings
 
-As described in Room Settings, depending on the service provider, the room may have specific settings. These settings will determine the behavior of the room when using the BigBlueButton provider.
+As described in [Room Settings](/docs/administration/rooms#settings), depending on the service provider, the room may have specific settings. These settings will determine the behavior of the room when using the BigBlueButton provider.
 
 The following table shows the resources that can be used in the provider and their associated parameter in BigBlueButton.
 
@@ -159,9 +172,9 @@ The following table shows the resources that can be used in the provider and the
 |  `allow_mods_to_eject_cameras`  |     `allowModsToEjectCameras`      |     false      | Allow moderators to close other users cameras in the meeting.                                                                                                         |
 |          `disable_cam`          |      `lockSettingsDisableCam`      |     false      | Prevent users from sharing their camera in the meeting.                                                                                                               |
 |          `disable_mic`          |      `lockSettingsDisableMic`      |     false      | Prevent users from sharing their microphone in the meeting.                                                                                                           |
-|     `disable_private_chat`      |  `lockSettingsDisablePrivateChat`  |     false      | Prevent users from using the private chat in the meeting.                                                                                                             |
-|      `disable_public_chat`      |  `lockSettingsDisablePublicChat`   |     false      | Prevent users from using the public chat in the meeting.                                                                                                              |
-|         `disable_notes`         |     `lockSettingsDisableNotes`     |     false      | Prevent users from using the notes in the meeting.                                                                                                                    |
+|   ~~`disable_private_chat`~~    |  `lockSettingsDisablePrivateChat`  |     false      | Prevent users from using the private chat in the meeting.                                                                                                             |
+|    ~~`disable_public_chat`~~    |  `lockSettingsDisablePublicChat`   |     false      | Prevent users from using the public chat in the meeting.                                                                                                              |
+|       ~~`disable_notes`~~       |     `lockSettingsDisableNotes`     |     false      | Prevent users from using the notes in the meeting.                                                                                                                    |
 |        `welcome_message`        |             `welcome`              |                | The message to be displayed when the user joins the meeting.                                                                                                          |
 |    `moderator_only_message`     |       `moderatorOnlyMessage`       |                | The message to be displayed when a non-moderator user joins the meeting.                                                                                              |
 |       `camera_as_content`       |         `cameraAsContent`          |     false      | Enables/Disables camera as a content.                                                                                                                                 |
