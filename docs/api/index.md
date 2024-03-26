@@ -6,41 +6,26 @@ sidebar_label: Overview
 
 # API Overview
 
-The API is a RESTful API that uses JSON for serialization and OAuth 2.0 for authentication. In this section, you will find information about the API resources and how to use them.
+Welcome to the API Overview section! In this portion of the guide, we introduce the main elements regarding our API's functioning, making it more accessible to both technical and non-technical readers.
 
-## API Authentication
+## Authenticating with the API
 
-The API uses OAuth 2.0 for authentication. To authenticate with the API, you need to create an OAuth 2.0 client and use the client credentials to authenticate with the API.
+Our API uses OAuth 2.0 for authentication. This process involves establishing an OAuth 2.0 client, after which you'll use the client credentials to verify your identity with the API. If this sounds confusing, don't worry! We go into more detail in our [API Authentication](/docs/api/authentication) section.
 
-> To see more about API authentication, see the [API Authentication](/docs/api/authentication) section.
+## Understanding API Resources
 
-## API Resources
+The API is designed around 'resources'. Each resource allows a specific set of actions to be performed, making our API flexible and straightforward to use. You can familiarize yourself with our resources in the [API Resources](/docs/api/resources) section.
 
-The API is organized in resources. Each resource has a set of operations that can be performed on it. 
+## API References: Private and Public
 
-> To see more about API resources, see the [API Resources](/docs/api/resources) section.
+We've categorized our API references into two sections: private and public.
 
+- The **Private API** contains all the resources available at the admin level. It's not intended for public use. Access to this API should be limited. Each deployment comes with a private API reference that you can reach at `https://<api-endpoint>/private/`. For the most up-to-date private API reference, visit [our site](https://video-stream-platform-api-reference.pages.dev/private/).
 
-## API Reference
+- The **Public API** contains all the resources for customers or users. It's open to the public. Each deployment includes a public API reference accessible at `https://<api-endpoint>/public/`. For the latest public API reference, visit [our site](https://video-stream-platform-api-reference.pages.dev/public/).
 
-### Private API
+## Testing with Postman
 
-The private API reference to have all the API resources that are available on an administration level. This API reference is not intended to be used by the public (customers or users) and your access needs to be restricted.
+Testing the API is a vital part of getting comfortable with its functionality. We've created a collection on Postman that contains all the API resources you need. The collection is available [here](https://www.postman.com/mimirtech/workspace/video-stream-resell-platform-api/overview).
 
-All deployment will have a private API reference that can be accessed at `https://<api-endpoint>/private/`.
-
-We keep an updated private API reference at https://video-stream-platform-api-reference.pages.dev/private/
-
-### Public API
-
-The public API reference to have all the API resources that are available on a customer or user level. This API reference is intended to be used by the public (customers or users) and your access needs to be public.
-
-All deployment will have a public API reference that can be accessed at `https://<api-endpoint>/public/`.
-
-We keep an updated public API reference can be found at https://video-stream-platform-api-reference.pages.dev/public/
-
-## Postman Collection
-
-To conveniently test the API, we have created a Postman collection that contains all the API resources. The collection can be found at:
-
-* Postman Collection [https://www.postman.com/mimirtech/workspace/video-stream-resell-platform-api/overview](https://www.postman.com/mimirtech/workspace/video-stream-resell-platform-api/overview).
+With a basic understanding of these elements, you're well on your way to effectively using our API! Please refer to the particular sections for more detailed information as needed. Happy API-ing! 🚀
