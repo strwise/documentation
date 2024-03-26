@@ -187,9 +187,23 @@ Available service features can vary depending on platform version or license typ
 
 ## Package Features {#package-features}
 
-> work in progress
+Package Features are the specific resources or services that a customer can access or consume when they subscribe to a Service Package. Each feature represents a unique aspect of the service that the customer can utilize. For instance, a feature could represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer can use for a web meeting.
 
-A feature represents a resource that the customer can consume or access through a Service Package. For example, a feature can represent the maximum number of participants that can join a meeting, or the maximum number of minutes that a customer have to a web meeting. Packages can have multiple features, each one representing a different resource that the customer can consume or access.
+Each Service Package can include multiple features, with each one representing a different resource that the customer can consume or access. It's important to note that each package can only have one feature of each type, and these are uniquely identified by the feature code.
+
+### Defining Package Features
+
+When defining features for a Service Package, consider the following:
+
+- **Identify the Resources**: Determine what resources or services the customer will be able to access or consume when they subscribe to the package.
+- **Define the Limits**: For each resource, define the limits or allowances. This could be the maximum number of participants for a meeting, the maximum number of minutes for a web meeting, etc.
+- **Assign a Unique Feature Code**: Each feature should have a unique code for identification purposes.
+
+### Managing Package Features
+
+Managing package features involves adding, updating, or removing features from a Service Package. This can be done through the platform's management interface or API.
+
+Remember, the goal of defining and managing package features is to create Service Packages that meet the diverse needs and preferences of your customers. By offering packages with different features, you can cater to a wider customer base and provide more value to your customers.
 
 ## Package Providers
 
