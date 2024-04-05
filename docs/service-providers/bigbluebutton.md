@@ -32,14 +32,14 @@ The BigBlueButton Service Provider requires a BigBlueButton server installed and
 
 The `properties` attribute of the Service Provider stores various data related to the Service Provider. Here are the properties specific to a **BigBlueButton** Service Provider:
 
-|   Property   |  Type   |  Default  | Required | Description                                                 |
-|:------------:|:-------:|:---------:|:--------:|:------------------------------------------------------------|
-|  `host_url`  | string  |           |   yes    | The host API URL of the BigBlueButton service provider.     |
-|   `secret`   | string  |           |   yes    | The host secret of the BigBlueButton service provider.      |
-|  `host_ip`   | string  |           |   yes    | The host IP of the BigBlueButton service provider.          |
-| `host_port`  | number  |    22     |    no    | The host ssh port of the BigBlueButton service provider.    |
-| `host_user`  | string  |           |   yes    | The host ssh user of the BigBlueButton service provider.    |
-|  `host_key`  | string  |           |   yes    | The host RSA ssh key of the BigBlueButton service provider. |
+|    Property     |  Type  | Default | Required | Description                                                                |
+|:---------------:|:------:|:-------:|:--------:|:---------------------------------------------------------------------------|
+|   `host_url`    | string |         |   yes    | The host API URL of the BigBlueButton service provider.                    |
+|    `secret`     | string |         |   yes    | The host secret of the BigBlueButton service provider.                     |
+|  ~~`host_ip`~~  | string |         |   yes    | The host IP of the BigBlueButton service provider. _(deprecated)_          |
+| ~~`host_port`~~ | number |   22    |    no    | The host ssh port of the BigBlueButton service provider. _(deprecated)_    |
+| ~~`host_user`~~ | string |         |   yes    | The host ssh user of the BigBlueButton service provider. _(deprecated)_    |
+| ~~`host_key`~~  | string |         |   yes    | The host RSA ssh key of the BigBlueButton service provider. _(deprecated)_ |
 
 
 #### Host URL
@@ -70,12 +70,24 @@ The `secret` property is the API secret of the BigBlueButton server. The secret 
 
 #### Host IP
 
+:::danger deprecated
+
+This property is deprecated and will be removed in future versions.
+
+:::
+
 The `host_ip` property is the IP address of the BigBlueButton server. The IP address must be accessible from the StreamWise platform server.
 
 * **Key**: `host_ip`
 * **Example**: `1.2.3.4`
 
 #### Host Port
+
+:::danger deprecated
+
+This property is deprecated and will be removed in future versions.
+
+:::
 
 The `host_port` property is the SSH port of the BigBlueButton server. The SSH port must be accessible from the StreamWise platform server.
 
@@ -84,12 +96,24 @@ The `host_port` property is the SSH port of the BigBlueButton server. The SSH po
 
 #### Host User
 
+:::danger deprecated
+
+This property is deprecated and will be removed in future versions.
+
+:::
+
 The `host_user` property is the user of the remote server where BigBlueButton is installed. This user will be used to authenticate via SSH.
 
 * **Key**: `host_user`
 * **Example**: `root`
 
 #### Host Key
+
+:::danger deprecated
+
+This property is deprecated and will be removed in future versions.
+
+:::
 
 The `host_key` property is the RSA SSH key of the remote server where BigBlueButton is installed. This key will be used to authenticate via SSH.
 
