@@ -2,3 +2,7 @@
 /assets/js/*
     X-Content-Type-Options: nosniff
     X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
+
+# https://developers.cloudflare.com/pages/configuration/headers/#prevent-your-pagesdev-deployments-showing-in-search-results
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex

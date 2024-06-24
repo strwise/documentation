@@ -46,6 +46,22 @@ The platform is built around the following entities:
 * [Users](#users)
 * [Rooms](#rooms)
 
+```mermaid
+graph LR
+A[Customers]
+B[Accounts]
+C[Users]
+D[Rooms]
+A -- Owns --> B
+A -- Has --> C
+B -- Owns --> D
+B -- Has --> C
+C -- Owns --> A
+C -- Owns --> B
+D -- Part of --> A
+D -- Part of --> B
+```
+
 ### Customers {#customers}
 
 Customers are the top-level entities in the system, they represent a billable party, like a business or person. Customers can own multiple accounts and rooms, and each customer can have multiple users associated with it.
