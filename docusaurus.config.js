@@ -15,7 +15,7 @@ const config = {
   noIndex: false,
 
   // Set the production url of your site here
-  url: 'https://docs.streamwise.online',
+  url: 'https://docs.streamwise.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -107,11 +107,11 @@ const config = {
             items: [
               {
                 label: 'API Reference (private)',
-                href: 'https://api-reference.streamwise.online/private',
+                href: 'https://api-reference.streamwise.app/private',
               },
               {
                 label: 'API Reference (public)',
-                href: 'https://api-reference.streamwise.online/public',
+                href: 'https://api-reference.streamwise.app/public',
               },
             ],
           },
