@@ -60,8 +60,12 @@ The metadata is stored as a JSON object. The keys are strings and the values can
 | `account_metadata['external_billing_id']` | integer | `123`  | Third-party billing id |
 | `account_metadata['external_crm_id']`     | integer | `456`  | Third-party CRM id     |
 
-:::note
-This is an example of how to set the `account_metadata` attribute. The `acccount_metadata` attribute can be set to any key-value pair.
+You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
+
+:::danger
+
+Since the `account_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+
 :::
 
 ### Account Features {#features}

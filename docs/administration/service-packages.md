@@ -45,7 +45,6 @@ Service Packages are composed of:
 
 You can create multiple Service Packages with different features and quotas that will be available for subscription by your customers. For example, you might offer a Standard and Premium package, with different features and quotas.
 
-
 ## Package Properties
 
 ### Package Types
@@ -64,9 +63,15 @@ The platform supports the following package types:
 
 ### Grace Period {#grace-period}
 
+> work in progress
+
 ### Trial Period {#trial-period}
 
+> work in progress
+
 ### Periodicity {#periodicity}
+
+> work in progress
 
 ### Package Attributes
 
@@ -102,8 +107,6 @@ The following table describes the available attributes of a Service Package.
 | notification_preferences | array   | The notification preferences of the service package.                        |
 | package_settings         | array   | The package settings of the service package.                                |
 | package_metadata         | array   | The package metadata of the service package.                                |
-
-
 
 ## Service Features
 

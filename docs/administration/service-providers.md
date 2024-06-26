@@ -178,18 +178,20 @@ At moment, no settings are available for a service provider.
 
 ### Metadata
 
-The `metadata` is a set of key-value pairs that can attached to a service provider. This can be useful for storing additional information or third-party data, such as identification from a CRM system or billing system.
+The `user_metadata` is a set of key-value pairs that can attached to a service provider. This can be useful for storing additional information or third-party data, such as identification from a CRM system or billing system.
 
-The metadata is stored as a JSON object. The keys are strings and the values can be strings, numbers, booleans, or null.
+**Example**
 
 | Key                               | Type    | Value | Description            |
 |-----------------------------------|---------|-------|------------------------|
 | `metadata['external_billing_id']` | integer | `123` | Third-party billing id |
 | `metadata['external_crm_id']`     | integer | `456` | Third-party CRM id     |
 
-:::note
+You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
 
-This is an example of how to set the `metadata` attribute. The `metadata` attribute can be set to any key-value pair.
+:::danger
+
+Since the `user_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
 
 :::
 
