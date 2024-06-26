@@ -245,7 +245,7 @@ At moment, the platform supports the following settings:
 
 :::info
 
-Some `customer_settings` properties can be set by top-level properties of the [Customer](/docs/administration/customers) object in API requests. Please refer to API reference guide for more information.
+Some `customer_settings` properties can be set by top-level properties upon [Customer](/docs/administration/customers) creation. Please refer to API reference guide for more information.
 
 :::
 
@@ -255,20 +255,18 @@ The `customer_metadata` is a set of key-value pairs that can attached to a custo
 
 The metadata is stored as a JSON object. The keys are strings and the values can be strings, numbers, booleans, or null.
 
-:::note
-
-This is an example of how to set the `customer_metadata` attribute. The `customer_metadata` attribute can be set to any key-value pair.
-
-:::
+**Example**
 
 | Key                                        | Type   | Value  | Description            |
 |--------------------------------------------|--------|--------|------------------------|
 | `customer_metadata['external_billing_id']` | string | `123`  | Third-party billing id |
 | `customer_metadata['external_crm_id']`     | string | `456`  | Third-party CRM id     |
 
-:::info
+You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
 
-Values are type hinted when possible. For example, if the value is `123`, the type will be `integer`. If the value is `true`, the type will be `boolean`. If the value is `null`, the type will be `null`.
+:::danger
+
+Since the `customer_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
 
 :::
 

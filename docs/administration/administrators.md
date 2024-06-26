@@ -156,6 +156,14 @@ The admin `admin_settings` is an array of settings that can be used to store any
 
 The admin `admin_metadata` is an array of metadata that can be used to store any information about the admin. This metadata are used to store information about the admin that is not part of the admin properties.
 
+You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
+
+:::danger
+
+Since the `admin_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+
+:::
+
 ## Admin Authorization
 
 StreamWise platform provides a Role-Based Access Control (RBAC) through its Authorization mechanism. This means that you can define what each admin user can do within the system by assigning them to a role.

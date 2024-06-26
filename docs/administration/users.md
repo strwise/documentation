@@ -51,19 +51,19 @@ Some `user_settings` properties can be set by top-level properties of the [User]
 
 The `user_metadata` is a set of key-value pairs that can attached to a user. This can be useful for storing additional information or third-party data, such as a customer ID from a CRM system or billing system.
 
-The metadata is stored as a JSON object. The keys are strings and the values can be strings, numbers, booleans, or null.
+**Example**
 
 | Key                                    | Type   | Value  | Description            |
 |----------------------------------------|--------|--------|------------------------|
 | `user_metadata['external_billing_id']` | string | `123`  | Third-party billing id |
 | `user_metadata['external_crm_id']`     | string | `456`  | Third-party CRM id     |
 
-:::info
-Values are type hinted when possible. For example, if the value is `123`, the type will be `integer`. If the value is `true`, the type will be `boolean`. If the value is `null`, the type will be `null`.
-:::
+You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
 
-:::note
-This is an example of how to set the `user_metadata` attribute, this can be set to any key-value pair.
+:::danger
+
+Since the `user_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+
 :::
 
 ## User Management {#management}

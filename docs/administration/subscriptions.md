@@ -204,6 +204,14 @@ The subscription last update date is the date when the subscription was last upd
 Subscription Metadata is not available yet.
 :::
 
+You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
+
+:::danger
+
+Since the `user_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+
+:::
+
 ## Subscription Features {#features}
 
 Subscription Features encompass the various functionalities available to customers upon subscribing to a service.
