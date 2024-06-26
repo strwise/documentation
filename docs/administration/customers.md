@@ -228,7 +228,7 @@ See [Customer Metadata](#metadata) for more information.
 
 The `customer_settings` is a key-value pairs that store additional structured data used by the platform to configure additional information about the customer as part of the extended customer profile information.
 
-:::note
+:::info
 
 `customer_settings` attribute **only recognize predefined keys**. Any other key will be ignored.
 
@@ -243,9 +243,15 @@ At moment, the platform supports the following settings:
 | timezone | string | Customer timezone. Used to set the default timezone.  | America/Sao_Paulo                 |
 |  locale  | string | Customer locale. Used to set the default locale.      | en_US                             |
 
-:::info
+:::note
 
 Some `customer_settings` properties can be set by top-level properties upon [Customer](/docs/administration/customers) creation. Please refer to API reference guide for more information.
+
+:::
+
+:::danger
+
+Since the `customer_settings` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
 
 :::
 
