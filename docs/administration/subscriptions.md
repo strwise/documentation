@@ -200,13 +200,13 @@ The subscription last update date is the date when the subscription was last upd
 
 ### Subscription Metadata {#metadata}
 
-The subscription metadata is a set of key-value pairs that can be attached to a subscription. This can be useful for storing additional information or third-party data, such as a subscription ID from a billing system or CRM system.
+The `subscription_metadata` is a set of key-value pairs that can be attached to a subscription. This can be useful for storing additional information or third-party data, such as a subscription ID from a billing system or CRM system.
 
 You may store any scalar value (string, integer, float, boolean, etc.) inside the metadata attribute. In addition, one level of nested objects or arrays are allowed.
 
 :::danger
 
-Since the `user_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+Since the `subscription_metadata` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
 
 :::
 
