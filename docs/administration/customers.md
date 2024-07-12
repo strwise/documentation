@@ -158,8 +158,6 @@ The `customer_type` is used to identify the type of customer. The platform suppo
 
 The `hostname` can be used to set a custom domain for the customer. This can be used to set a custom domain for the customer's public links and brand. The `hostname` must be a valid domain name and must be unique across all customers.
 
-> Not implemented yet.
-
 #### Subdomain
 
 The `subdomain` can be used to set a custom subdomain for the customer. This can be used to set a custom subdomain for the customer's public links and brand. 
@@ -168,7 +166,6 @@ Subdomains have your TLD defined by the platform URL. For example, if the platfo
 
 This attribute can be set upn customer creation and needs to be unique across all customers. If not set, the platform will generate a unique subdomain based on Customer `company_name` or `first_name` and `last_name`.
 
-> Not implemented yet.
 
 #### Country
 
@@ -194,7 +191,12 @@ For example, if the customer has a website at `https://www.example.com`, you can
 For more information about CORS, see [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS).
 :::
 
-> Not implemented yet.
+:::danger
+
+Since the `allowed_domains_origins` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+
+:::
+
 
 #### Allowed Domains Registration
 
@@ -202,7 +204,11 @@ The `allowed_domains_registration` is a list of domains allowed for User creatio
 
 For example, if a Customer has the domain `example.com` and you want to allow **only** users with email addresses from `example.com` to be created or associated with the customer, you can set `allowed_domains_registration` to `["example.com"]`. If you want to allow users with email addresses from `example.com` and `example.org`, you can set `allowed_domains_registration` to `["example.com", "example.org"]`.
 
-> Not implemented yet.
+:::danger
+
+Since the `allowed_domains_registration` attribute is simply a key-value store (object), all write operations will **overwrite** the entire object, so be sure to **merge** existing data on your end when performing updates.
+
+:::
 
 #### Customer Settings
 
@@ -236,12 +242,7 @@ The `customer_settings` is a key-value pairs that store additional structured da
 
 At moment, the platform supports the following settings:
 
-|   Key    | Type   | Description                                           | Value                             |
-|:--------:|--------|-------------------------------------------------------|-----------------------------------|
-|   url    | string | Customer website URL. Used in public links and brand. | https://www.mimirtech.co          |
-|   logo   | string | Customer logo URL. Used for brand.                    | https://www.mimirtech.co/logo.png |
-| timezone | string | Customer timezone. Used to set the default timezone.  | America/Sao_Paulo                 |
-|  locale  | string | Customer locale. Used to set the default locale.      | en_US                             |
+**No settings supported at moment**.
 
 :::note
 
