@@ -116,7 +116,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} <a href="https://www.mimirtech.co" target="_blank">Mimir Tech do Brasil</a>. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Mimir Tech. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
