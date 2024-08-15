@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 sidebar_label: Overview
+robots: noindex
 ---
 # Participant Overview
 
