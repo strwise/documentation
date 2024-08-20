@@ -19,7 +19,7 @@ Please refer to [Service Providers Administration](/docs/administration/service-
 
 ## Requirements
 
-The BigBlueButton Service Provider requires a BigBlueButton server installed and configured. StreamWise platform will interact direct with the host server via SSH and API calls. The following requirements must be met:
+The BigBlueButton Service Provider requires a [BigBlueButton](https://docs.bigbluebutton.org/administration/install/) server installed and configured. StreamWise platform will interact direct with the host server via SSH and API calls. The following requirements must be met:
 
 - BigBlueButton version **2.6 or higher**.
 - The BigBlueButton server must be **accessible via SSH**.
