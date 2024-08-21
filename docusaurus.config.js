@@ -15,7 +15,7 @@ const config = {
   noIndex: false,
 
   // Set the production url of your site here
-  url: 'https://streamwise-vpaas-docs.pages.dev',
+  url: process.env.DOMAIN || 'https://docs.streamwise.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
