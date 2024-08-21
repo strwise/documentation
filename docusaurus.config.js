@@ -56,8 +56,6 @@ const config = {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
                 sitemap: {
-                    lastmod: false,
-                    changefreq: 'weekly',
                     priority: 1.0,
                     filename: 'sitemap.xml',
                 },
