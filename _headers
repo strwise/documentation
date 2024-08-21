@@ -1,7 +1,16 @@
 # add header host for cloudflare pages for do not track any file under assets
+# js
 /assets/js/*
     X-Content-Type-Options: nosniff
     X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
+# css
+/assets/css/*
+    X-Content-Type-Options: nosniff
+    X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
+
+# prevent robots to crawl any /cdn-cgi path
+/cdn-cgi/*
+    X-Robots-Tag: noindex
 
 # https://developers.cloudflare.com/pages/configuration/headers/#prevent-your-pagesdev-deployments-showing-in-search-results
 https://:project.pages.dev/*
