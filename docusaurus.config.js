@@ -11,11 +11,11 @@ const config = {
   tagline: 'Welcome to StreamWise vPaaS, a Video Streaming Resell Platform. StreamWise is a powerful and customizable platform that enables businesses and individuals to offer high-quality video streaming services to their customers.',
   favicon: 'img/favicon.png',
 
-  // disable indexing of the site
-  noIndex: false,
+  // disable indexing of the site if DOMAIN is different from https://streamwise-vpaas-docs.pages.dev
+    noIndex: process.env.DOMAIN !== 'https://streamwise-vpaas-docs.pages.dev',
 
   // Set the production url of your site here
-  url: process.env.DOMAIN || 'https://docs.streamwise.app',
+  url: process.env.DOMAIN || 'https://streamwise-vpaas-docs.pages.dev',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
