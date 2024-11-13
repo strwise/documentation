@@ -56,8 +56,9 @@ const config = {
                     customCss: require.resolve('./src/css/custom.css'),
                 },
                 sitemap: {
-                    priority: 1.0,
+                    priority: 0.6,
                     filename: 'main-sitemap.xml',
+                    changefreq: 'monthly',
                 },
             }),
         ],
