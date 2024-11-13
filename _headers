@@ -2,11 +2,11 @@
 # js
 /assets/js/*
     X-Content-Type-Options: nosniff
-    X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
+#    X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
 # css
 /assets/css/*
     X-Content-Type-Options: nosniff
-    X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
+#    X-Robots-Tag: nosnippet, noarchive, notranslate, noindex, nofollow, noimageindex
 
 # prevent robots to crawl any /cdn-cgi path
 /cdn-cgi/*

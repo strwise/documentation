@@ -2,6 +2,7 @@
 sidebar_position: 0
 title: Service Providers
 sidebar_label: Overview
+description: Manage multiple stream service providers from various vendors with StreamWise VPaaS multi-vendor architecture.
 ---
 
 # Service Providers

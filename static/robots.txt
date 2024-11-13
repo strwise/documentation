@@ -1,2 +1,5 @@
 User-Agent: *
 Allow: /
+Disallow: /cdn-cgi/
+
+sitemap: https://docs.streamwise.app/main-sitemap.xml

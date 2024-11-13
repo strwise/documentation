@@ -1,6 +1,6 @@
 ---
 title: Scalelite Service Provider
-description: Scalelite is a service provider that provides a scalable and reliable BigBlueButton infrastructure.
+description: How to configure multiple Scalelite Video Load Balancers in the StreamWise platform.
 sidebar_position: 2
 sidebar_label: Scalelite
 ---
